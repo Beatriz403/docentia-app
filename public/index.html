@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DocentIA - Recupera tu tiempo. Simplifica tu trabajo docente con IA adaptada a LOMLOE y Extremadura.">
+  <title>DocentIA - Recupera tu tiempo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header id="header">
+    <div class="container">
+      <div class="header-content">
+        <!-- Replaced SVG with actual DocentIA logo -->
+        <div class="logo">
+          <img src="/images/logo.jpeg" alt="DocentIA" class="logo-image">
+        </div>
+        <nav>
+          <a href="#funciones">Funciones</a>
+          <a href="#precios">Precios</a>
+          <a href="#testimonios">Sobre nosotros</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <button id="theme-toggle" aria-label="Cambiar tema">
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <!-- Added canvas element for circuit board network effect -->
+    <canvas id="circuit-canvas"></canvas>
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <h1>Empieza gratis con Docent<span class="highlight">IA</span></h1>
+          <p class="hero-subtitle">Simplifica tu trabajo y gana tiempo para lo importante</p>
+          <p class="hero-description">Diseñado para docentes de Extremadura. Compatible con LOMLOE y decretos autonómicos.</p>
+          <div class="hero-buttons">
+            <button class="btn btn-primary">Crear cuenta</button>
+            <button class="btn btn-outline">Probar Botón de Emergencia Gratis</button>
+          </div>
+          <p class="hero-note">Sin tarjeta, sin compromiso. Botón de Emergencia gratis con 5 usos/mes.</p>
+        </div>
+        <div class="hero-image">
+          <div class="image-glow"></div>
+          <img src="images/mujer-portada.png" alt="Profesora usando DocentIA">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="funciones" class="features">
+    <div class="container">
+      <div class="section-header">
+        <h2>Funciones</h2>
+        <p>Con DocentIA optimizas tu labor con varias herramientas que agilizan tu trabajo</p>
+      </div>
+      <!-- Updated to match reference design with only 3 main feature cards with photos -->
+      <div class="features-main-grid">
+        <div class="feature-main-card">
+          <div class="feature-image">
+            <img src="/images/image-f7ilzpdPF1zewVCY5snGjZ0zhBr9Kl.png" alt="Botón de emergencia">
+          </div>
+          <div class="feature-main-content">
+            <h3>Botón de emergencia</h3>
+            <p>Envía rápidamente comunicaciones importantes</p>
+          </div>
+        </div>
+        <div class="feature-main-card">
+          <div class="feature-image">
+            <img src="/images/image-AFn1DwPHiuLFf4gRGx8rkZf331G3IH.png" alt="Unidades didácticas">
+          </div>
+          <div class="feature-main-content">
+            <h3>Unidades didácticas</h3>
+            <p>Prepara materaterial de forma con facilidad</p>
+          </div>
+        </div>
+        <div class="feature-main-card">
+          <div class="feature-image">
+            <img src="/images/image-f7ilzpdPF1zewVCY5snGjZ0zhBr9Kl.png" alt="Exámenes automáticos">
+          </div>
+          <div class="feature-main-content">
+            <h3>Exámenes automáticos</h3>
+            <p>Corrige examenes de forma eficiente</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Separated additional features into a different grid -->
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon gradient-emerald">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <h3>Botón de emergencia</h3>
+          <p>Actividades en 30 segundos</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon gradient-blue">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+            </svg>
+          </div>
+          <h3>Unidades Didácticas</h3>
+          <p>Desarrollos completos</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon gradient-purple">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <circle cx="12" cy="12" r="6"></circle>
+              <circle cx="12" cy="12" r="2"></circle>
+            </svg>
+          </div>
+          <h3>Exámenes</h3>
+          <p>Pruebas adaptadas</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon gradient-orange">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 11l3 3L22 4"></path>
+              <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+            </svg>
+          </div>
+          <h3>Rúbricas</h3>
+          <p>Matrices de evaluación</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon gradient-teal">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+            </svg>
+          </div>
+          <h3>Situaciones de Aprendizaje</h3>
+          <p>Diseños didácticos</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon gradient-indigo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+          </div>
+          <h3>Informes</h3>
+          <p>Boletines personalizados</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon gradient-yellow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+            </svg>
+          </div>
+          <h3>Generador de Ideas</h3>
+          <p>Propuestas creativas</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon gradient-rose">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="3" y1="9" x2="21" y2="9"></line>
+              <line x1="9" y1="21" x2="9" y2="9"></line>
+            </svg>
+          </div>
+          <h3>Problemas de Matemáticas</h3>
+          <p>Generador automático</p>
+        </div>
+      </div>
+      <div class="section-cta">
+        <button class="btn btn-primary">Descubre todas las funciones</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="precios" class="pricing">
+    <div class="container">
+      <div class="section-header center">
+        <h2>Planes adaptados a ti</h2>
+        <p>Elige el plan que mejor se ajuste a tus necesidades. Sin compromisos, cancela cuando quieras</p>
+      </div>
+      <div class="pricing-grid">
+        <div class="price-card">
+          <h3>Plan Gratuito</h3>
+          <p class="plan-desc">Perfecto para empezar</p>
+          <div class="price">
+            <span class="amount">0€</span>
+            <span class="period">/mes</span>
+          </div>
+          <p class="price-note">Gratis para siempre</p>
+          <ul class="features-list">
+            <li>Botón de Emergencia: 5 usos/mes</li>
+            <li>Acceso limitado a funciones básicas</li>
+            <li>Compatible con LOMLOE</li>
+          </ul>
+          <button class="btn btn-outline">Comenzar gratis</button>
+        </div>
+        <div class="price-card featured">
+          <div class="badge">Más popular</div>
+          <h3>Plan Profesional</h3>
+          <p class="plan-desc">Para docentes activos</p>
+          <div class="price">
+            <span class="amount">12€</span>
+            <span class="period">/mes</span>
+          </div>
+          <p class="price-note">Facturado mensualmente</p>
+          <ul class="features-list">
+            <li><strong>Todo del plan gratuito, más:</strong></li>
+            <li>Usos ilimitados de todas las funciones</li>
+            <li>Generación de unidades didácticas completas</li>
+            <li>Soporte prioritario</li>
+            <li>Actualizaciones automáticas</li>
+          </ul>
+          <button class="btn btn-primary">Empezar ahora</button>
+        </div>
+        <div class="price-card">
+          <h3>Plan Centro</h3>
+          <p class="plan-desc">Para todo el claustro</p>
+          <div class="price">
+            <span class="amount custom">Personalizado</span>
+          </div>
+          <p class="price-note">Según número de docentes</p>
+          <ul class="features-list">
+            <li><strong>Todo del plan profesional, más:</strong></li>
+            <li>Licencias para todo el centro</li>
+            <li>Formación personalizada</li>
+            <li>Soporte dedicado</li>
+            <li>Facturación centralizada</li>
+          </ul>
+          <button class="btn btn-outline">Contactar</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonios" class="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <h2>Lo que dicen de DocentIA</h2>
+        <p>Opiniones de docentes de Extremadura</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <div class="avatar">
+              <img src="images/image.png" alt="Carmen P.">
+            </div>
+            <p>"Siempre he querido tener para aligerar mis métodos de enseñanza. DocentIA me ha cambiado la forma de trabajar."</p>
+          </div>
+          <div class="author">
+            <p class="name">Carmen P.</p>
+            <p class="title">Maestra de vocación - Cáceres</p>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <div class="avatar">
+              <img src="images/image.png" alt="Javier L.">
+            </div>
+            <p>"He podido crear ahorro de horario y contenido de muy buen nivel con facilidad. Increíble herramienta."</p>
+          </div>
+          <div class="author">
+            <p class="name">Javier L.</p>
+            <p class="title">Profesor - Badajoz</p>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <div class="avatar">
+              <img src="images/image.png" alt="Beatriz S.">
+            </div>
+            <p>"He pasado de hacer muchas tareas a tener una plataforma que lo simplifica todo. Ahorro horas cada semana."</p>
+          </div>
+          <div class="author">
+            <p class="name">Beatriz S.</p>
+            <p class="title">Profesora - Mérida</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="faq">
+    <div class="container">
+      <div class="section-header center">
+        <h2>Preguntas frecuentes</h2>
+        <p>Resolvemos tus dudas sobre DocentIA</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <h3>¿Necesito conocimientos técnicos para usar DocentIA?</h3>
+          <p>No, DocentIA está diseñado para ser intuitivo y fácil de usar. Solo necesitas saber lo que quieres crear y la plataforma genera el contenido por ti en segundos.</p>
+        </div>
+        <div class="faq-item">
+          <h3>¿El contenido generado cumple con la LOMLOE?</h3>
+          <p>Sí, todo el contenido está actualizado según la LOMLOE y los decretos específicos de Extremadura. Puedes personalizarlo según tus necesidades específicas.</p>
+        </div>
+        <div class="faq-item">
+          <h3>¿Puedo cancelar mi suscripción en cualquier momento?</h3>
+          <p>Sí, puedes cancelar tu suscripción cuando quieras sin penalizaciones. Si cancelas, seguirás teniendo acceso hasta el final del período de facturación.</p>
+        </div>
+        <div class="faq-item">
+          <h3>¿Qué incluye el Botón de Emergencia gratuito?</h3>
+          <p>El plan gratuito incluye 5 usos al mes del Botón de Emergencia, que genera actividades completas en 30 segundos. Es perfecto para situaciones imprevistas o para probar la plataforma.</p>
+        </div>
+        <div class="faq-item">
+          <h3>¿Ofrecen descuentos para centros educativos?</h3>
+          <p>Sí, ofrecemos planes personalizados para centros educativos con descuentos según el número de licencias. Contacta con nosotros para una propuesta a medida.</p>
+        </div>
+        <div class="faq-item">
+          <h3>¿Mis datos están seguros?</h3>
+          <p>Absolutamente. Cumplimos con el RGPD y todas las normativas de protección de datos. Tus documentos y contenidos son privados y no se comparten con terceros.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Section -->
+  <section class="final-cta">
+    <div class="container">
+      <div class="cta-card">
+        <h2>La burocracia te roba tiempo. <br><span class="highlight">DocentIA te lo devuelve.</span></h2>
+        <p>Únete a cientos de docentes extremeños que ya están transformando su trabajo</p>
+        <div class="cta-buttons">
+          <button class="btn btn-primary large">Crear cuenta gratis</button>
+        </div>
+        <div class="cta-notes">
+          <p class="main-note">Sin tarjeta de crédito - Sin compromiso - Botón de Emergencia gratis para siempre</p>
+          <p class="sub-note">Cumple con LOMLOE y normativa de Extremadura</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <!-- Replaced SVG with actual DocentIA logo -->
+        <div class="logo">
+          <img src="/images/logo.jpeg" alt="DocentIA" class="logo-image">
+        </div>
+        <p class="copyright">© 2025 DocentIA. Diseñado para docentes de Extremadura.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocentIA - Recupera tu tiempo</title>
+    <meta name="description" content="DocentIA - Herramienta de IA para docentes de Extremadura. Simplifica tu trabajo y gana tiempo para lo importante.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.jpeg" alt="DocentIA Logo">
+                </a>
+                <nav class="nav-menu">
+                    <a href="#funciones">Funciones</a>
+                    <a href="#precios">Precios</a>
+                    <a href="#testimonios">Sobre nosotros</a>
+                    <a href="#faq">FAQ</a>
+                    <!-- Added link to generator -->
+                    <a href="generador-unidades.html" class="nav-cta">Probar ahora</a>
+                </nav>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"/>
+                        <line x1="12" y1="1" x2="12" y2="3"/>
+                        <line x1="12" y1="21" x2="12" y2="23"/>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                        <line x1="1" y1="12" x2="3" y2="12"/>
+                        <line x1="21" y1="12" x2="23" y2="12"/>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                    </svg>
+                    <svg class="moon-icon hidden" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section circuit-pattern">
+        <canvas id="network-canvas"></canvas>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Empieza gratis con Docent<span class="text-primary">IA</span></h1>
+                    <p class="hero-subtitle">Simplifica tu trabajo y gana tiempo para lo importante</p>
+                    <p class="hero-description">Diseñado para docentes de Extremadura. Compatible con LOMLOE y decretos autonómicos.</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary">Crear cuenta</button>
+                        <button class="btn btn-outline">Probar Botón de Emergencia Gratis</button>
+                    </div>
+                    <p class="hero-disclaimer">Sin tarjeta, sin compromiso. Botón de Emergencia gratis con 5 usos/mes.</p>
+                </div>
+                <div class="hero-image">
+                    <div class="image-glow"></div>
+                    <img src="images/mujer-portada.png" alt="Profesora usando DocentIA con interfaz holográfica">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="funciones" class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Funciones</h2>
+                <p>Con DocentIA optimizas tu labor con varias herramientas que agilizan tu trabajo</p>
+            </div>
+
+            <!-- Main 3 Features -->
+            <div class="main-features">
+                <!-- Added explicit onclick and improved link structure for emergency button -->
+                <a href="generador-unidades.html" class="feature-card-large" onclick="console.log('[v0] Navigating to generador-unidades.html');">
+                    <div class="feature-image">
+                        <img src="images/image-f7ilzpdPF1zewVCY5snGjZ0zhBr9Kl.png" alt="Botón de emergencia" onerror="this.src='/images/image-f7ilzpdpf1zewvcy5sngjz0zhbr9kl-ffrde.png'">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Botón de emergencia</h3>
+                        <p>Envía rápidamente comunicaciones importantes</p>
+                        <span class="card-link-indicator">→ Ir al generador</span>
+                    </div>
+                </a>
+
+                <!-- Added explicit onclick and improved link structure for didactic units -->
+                <a href="generador-unidades.html" class="feature-card-large" onclick="console.log('[v0] Navigating to generador-unidades.html');">
+                    <div class="feature-image">
+                        <img src="images/image-AFn1DwPHiuLFf4gRGx8rkZf331G3IH.png" alt="Unidades didácticas" onerror="this.src='/images/image-afn1dwphiulff4grgx8rkzf331g3ih-arq4h.png'">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Unidades didácticas</h3>
+                        <p>Prepara matererial de forma con facilidad</p>
+                        <span class="card-link-indicator">→ Ir al generador</span>
+                    </div>
+                </a>
+
+                <!-- Added explicit onclick and improved link structure for exams -->
+                <a href="generador-rubricas-examenes.html" class="feature-card-large" onclick="console.log('[v0] Navigating to generador-rubricas-examenes.html');">
+                    <div class="feature-image">
+                        <img src="images/mujer-portada.png" alt="Exámenes automáticos" onerror="this.src='/images/mujer-portada.png'">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Exámenes automáticos</h3>
+                        <p>Corrige exámenes y crea rúbricas de evaluación</p>
+                        <span class="card-link-indicator">→ Ir al generador</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Secondary Features -->
+            <div class="secondary-features">
+                <div class="feature-card-small">
+                    <div class="feature-icon icon-teal">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <circle cx="12" cy="12" r="6"/>
+                            <circle cx="12" cy="12" r="2"/>
+                        </svg>
+                    </div>
+                    <h4>Situaciones de Aprendizaje</h4>
+                    <p>Diseños didácticos</p>
+                </div>
+
+                <div class="feature-card-small">
+                    <div class="feature-icon icon-indigo">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                            <polyline points="10 9 9 9 8 9"/>
+                        </svg>
+                    </div>
+                    <h4>Informes</h4>
+                    <p>Boletines personalizados</p>
+                </div>
+
+                <div class="feature-card-small">
+                    <div class="feature-icon icon-yellow">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="5"/>
+                            <line x1="12" y1="1" x2="12" y2="3"/>
+                            <line x1="12" y1="21" x2="12" y2="23"/>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                            <line x1="1" y1="12" x2="3" y2="12"/>
+                            <line x1="21" y1="12" x2="23" y2="12"/>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                        </svg>
+                    </div>
+                    <h4>Generador de Ideas</h4>
+                    <p>Propuestas creativas</p>
+                </div>
+
+                <div class="feature-card-small">
+                    <div class="feature-icon icon-orange">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="9" y1="9" x2="15" y2="9"/>
+                            <line x1="9" y1="15" x2="15" y2="15"/>
+                        </svg>
+                    </div>
+                    <h4>Problemas de Matemáticas</h4>
+                    <p>Genera ejercicios personalizados</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="precios" class="pricing-section">
+        <div class="container">
+            <div class="section-header centered">
+                <h2>Planes adaptados a ti</h2>
+                <p>Elige el plan que mejor se ajuste a tus necesidades. Sin compromisos, cancela cuando quieras</p>
+            </div>
+
+            <div class="pricing-cards">
+                <!-- Plan Gratuito -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Plan Gratuito</h3>
+                        <p>Perfecto para empezar</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="price">0€</span>
+                        <span class="period">/mes</span>
+                    </div>
+                    <p class="pricing-note">Gratis para siempre</p>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span>Botón de Emergencia: 5 usos/mes</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span>Acceso limitado a funciones básicas</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span>Compatible con LOMLOE</span>
+                        </li>
+                    </ul>
+                    <button class="btn btn-outline-full">Comenzar gratis</button>
+                </div>
+
+                <!-- Plan Profesional -->
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Más popular</div>
+                    <div class="pricing-header">
+                        <h3>Plan Profesional</h3>
+                        <p>Para docentes activos</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="price">12€</span>
+                        <span class="period">/mes</span>
+                    </div>
+                    <p class="pricing-note">Facturado mensualmente</p>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span><strong>Todo del plan gratuito, más:</strong></span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span>Usos ilimitados de todas las funciones</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span>Generación de unidades didácticas completas</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span>Soporte prioritario</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span>Actualizaciones automáticas</span>
+                        </li>
+                    </ul>
+                    <button class="btn btn-primary-full">Empezar ahora</button>
+                </div>
+
+                <!-- Plan Centro -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Plan Centro</h3>
+                        <p>Para todo el claustro</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="price small">Personalizado</span>
+                    </div>
+                    <p class="pricing-note">Según número de docentes</p>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span><strong>Todo del plan profesional, más:</strong></span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span>Licencias para todo el centro</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span>Formación personalizada</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span>Soporte dedicado</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span>Facturación centralizada</span>
+                        </li>
+                    </ul>
+                    <button class="btn btn-outline-full">Contactar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonios" class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Lo que dicen de DocentIA</h2>
+                <p>Opiniones de docentes de Extremadura</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">
+                                <img src="images/image.png" alt="Carmen P.">
+                            </div>
+                            <div class="testimonial-quote">
+                                <p>"Siempre he querido tener para aligerar mis métodos de enseñanza. DocentIA me ha cambiado la forma de trabajar."</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-author">
+                            <p class="author-name">Carmen P.</p>
+                            <p class="author-title">Maestra de vocación - Cáceres</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">
+                                <img src="images/image.png" alt="Javier L.">
+                            </div>
+                            <div class="testimonial-quote">
+                                <p>"He podido crear ahorro de horario y contenido de muy buen nivel con facilidad. Increíble herramienta."</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-author">
+                            <p class="author-name">Javier L.</p>
+                            <p class="author-title">Profesor - Badajoz</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">
+                                <img src="images/image.png" alt="Beatriz S.">
+                            </div>
+                            <div class="testimonial-quote">
+                                <p>"He pasado de hacer muchas tareas a tener una plataforma que lo simplifica todo. Ahorro horas cada semana."</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-author">
+                            <p class="author-name">Beatriz S.</p>
+                            <p class="author-title">Profesora - Mérida</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <div class="section-header centered">
+                <h2>Preguntas frecuentes</h2>
+                <p>Resolvemos tus dudas sobre DocentIA</p>
+            </div>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3>¿Necesito conocimientos técnicos para usar DocentIA?</h3>
+                    <p>No, DocentIA está diseñado para ser intuitivo y fácil de usar. Solo necesitas saber lo que quieres crear y la plataforma genera el contenido por ti en segundos.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>¿El contenido generado cumple con la LOMLOE?</h3>
+                    <p>Sí, todo el contenido está actualizado según la LOMLOE y los decretos específicos de Extremadura. Puedes personalizarlo según tus necesidades específicas.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>¿Puedo cancelar mi suscripción en cualquier momento?</h3>
+                    <p>Sí, puedes cancelar tu suscripción cuando quieras sin penalizaciones. Si cancelas, seguirás teniendo acceso hasta el final del período de facturación.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>¿Qué incluye el Botón de Emergencia gratuito?</h3>
+                    <p>El plan gratuito incluye 5 usos al mes del Botón de Emergencia, que genera actividades completas en 30 segundos. Es perfecto para situaciones imprevistas o para probar la plataforma.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>¿Ofrecen descuentos para centros educativos?</h3>
+                    <p>Sí, ofrecemos planes personalizados para centros educativos con descuentos según el número de licencias. Contacta con nosotros para una propuesta a medida.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>¿Mis datos están seguros?</h3>
+                    <p>Absolutamente. Cumplimos con el RGPD y todas las normativas de protección de datos. Tus documentos y contenidos son privados y no se comparten con terceros.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta-section">
+        <div class="container">
+            <div class="cta-card">
+                <h2>La burocracia te roba tiempo. <br><span class="text-primary">DocentIA te lo devuelve.</span></h2>
+                <p class="cta-description">Únete a cientos de docentes extremeños que ya están transformando su trabajo</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-primary-large">Crear cuenta gratis</button>
+                </div>
+                <div class="cta-disclaimers">
+                    <p class="disclaimer-main">Sin tarjeta de crédito - Sin compromiso - Botón de Emergencia gratis para siempre</p>
+                    <p class="disclaimer-secondary">Cumple con LOMLOE y normativa de Extremadura</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">
+                    <img src="images/logo.jpeg" alt="DocentIA Logo">
+                </div>
+                <p>© 2025 DocentIA. Diseñado para docentes de Extremadura.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
