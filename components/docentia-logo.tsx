@@ -5,5 +5,3 @@ export function DocentIALogo({ className }: { className?: string }) {
     </div>
   )
 }
-
-
