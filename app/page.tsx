@@ -6,64 +6,6 @@ import { ThemeToggle } from "@/components/theme-toggle"
 import { NetworkMesh } from "@/components/network-mesh"
 import { Target, FileText, Lightbulb, Calculator, Check, Zap, BookOpen, ClipboardList, BarChart3, Cpu } from "lucide-react"
 
-const features = [
-  {
-    id: 1,
-    title: "Botón de emergencia",
-    description: "Envía rápidamente comunicaciones importantes",
-    icon: Zap,
-    href: "/generadores/boton-emergencia",
-    image: "/emergency-button-teacher.jpg",
-  },
-  {
-    id: 2,
-    title: "Unidades didácticas",
-    description: "Prepara matereterial de forma con facilidad",
-    icon: BookOpen,
-    href: "/generadores/unidades-didacticas",
-    image: "/learning-units-preparation.jpg",
-  },
-  {
-    id: 3,
-    title: "Exámenes automáticos",
-    description: "Corrige exámenes de forma eficiente",
-    icon: ClipboardList,
-    href: "/generadores/examenes-automaticos",
-    image: "/automatic-exam-correction.jpg",
-  },
-  {
-    id: 4,
-    title: "Situaciones de aprendizaje",
-    description: "Crea contextos educativos enriquecedores",
-    icon: Lightbulb,
-    href: "/generadores/situaciones-aprendizaje",
-    image: "/learning-situations.jpg",
-  },
-  {
-    id: 5,
-    title: "Informes",
-    description: "Genera reportes detallados de progreso",
-    icon: BarChart3,
-    href: "/generadores/informes",
-    image: "/progress-reports.jpg",
-  },
-  {
-    id: 6,
-    title: "Generador de ideas",
-    description: "Obtén inspiración para nuevas actividades",
-    icon: Cpu,
-    href: "/generadores/generador-ideas",
-    image: "/idea-generator.jpg",
-  },
-  {
-    id: 7,
-    title: "Problemas de Matemáticas",
-    description: "Crea ejercicios personalizados de matemáticas",
-    icon: Zap,
-    href: "/generadores/problemas-matematicas",
-    image: "/math-problems-generator.jpg",
-  },
-]
 
 export default function Page() {
   return (
