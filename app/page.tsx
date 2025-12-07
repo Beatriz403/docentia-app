@@ -1,3 +1,5 @@
+/mnt/user-data/outputs/page-enlaces-corregidos.tsx
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { DocentIALogo } from "@/components/docentia-logo"
@@ -29,11 +31,11 @@ export default function Page() {
             </nav>
             <div className="flex items-center gap-4">
               <ThemeToggle />
-              <a href="https://docentia-frontend.vercel.app" className="hidden md:block">
+              <Link href="/generadores/boton-emergencia">
                 <Button variant="outline" size="sm">
                   Acceder
                 </Button>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -55,15 +57,15 @@ export default function Page() {
                Compatible con LOMLOE y decretos autonómicos.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="https://docentia-frontend.vercel.app">
+                <Link href="/generadores/boton-emergencia">
                   <Button
                     size="lg"
                     className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6 rounded-xl font-semibold w-full sm:w-auto"
                   >
                     Crea tu cuenta
                   </Button>
-                </a>
-                <a href="https://docentia-frontend.vercel.app/generadores/boton-emergencia.html">
+                </Link>
+                <Link href="/generadores/boton-emergencia">
                   <Button
                     size="lg"
                     variant="outline"
@@ -71,7 +73,7 @@ export default function Page() {
                   >
                     Prueba gratis
                   </Button>
-                </a>
+                </Link>
               </div>
               <p className="text-sm text-white/60">
                 Sin tarjeta, sin compromiso. Botón de Emergencia gratis con 5 usos/mes.
@@ -101,7 +103,7 @@ export default function Page() {
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {/* Feature 1 - Botón de Emergencia */}
-            <a href="https://docentia-generadores.vercel.app/generadores/boton-emergencia">
+            <Link href="/generadores/boton-emergencia">
               <Card className="bg-white overflow-hidden group hover:shadow-2xl transition-all duration-300 cursor-pointer h-full">
                 <div className="relative h-64 overflow-hidden">
                   <img
@@ -115,10 +117,10 @@ export default function Page() {
                   <p className="text-slate-600">Genera actividades en 30 segundos para situaciones urgentes</p>
                 </CardContent>
               </Card>
-            </a>
+            </Link>
 
             {/* Feature 2 - Unidades Didácticas */}
-            <a href="https://docentia-frontend.vercel.app">
+            <Link href="/generadores/unidades-didacticas">
               <Card className="bg-white overflow-hidden group hover:shadow-2xl transition-all duration-300 cursor-pointer h-full">
                 <div className="relative h-64 overflow-hidden">
                   <img
@@ -132,10 +134,10 @@ export default function Page() {
                   <p className="text-slate-600">Prepara material completo con facilidad</p>
                 </CardContent>
               </Card>
-            </a>
+            </Link>
 
             {/* Feature 3 - Exámenes Automáticos con Rúbricas */}
-            <a href="https://docentia-frontend.vercel.app">
+            <Link href="/generadores/examenes-automaticos">
               <Card className="bg-white overflow-hidden group hover:shadow-2xl transition-all duration-300 cursor-pointer h-full">
                 <div className="relative h-64 overflow-hidden">
                   <img
@@ -149,51 +151,57 @@ export default function Page() {
                   <p className="text-slate-600">Genera exámenes y crea rúbricas de evaluación</p>
                 </CardContent>
               </Card>
-            </a>
+            </Link>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mt-16">
             {/* Feature 4 - Situaciones de Aprendizaje */}
-            <Card className="bg-white/95 backdrop-blur border-2 border-slate-200 overflow-hidden group hover:border-primary/50 hover:shadow-xl transition-all duration-300">
-              <CardContent className="p-5">
-                <div className="flex flex-col items-center text-center space-y-2">
-                  <div className="w-14 h-14 rounded-full bg-gradient-to-br from-teal-400 to-green-500 flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <Target className="w-7 h-7 text-white" />
+            <Link href="/generadores/situaciones-aprendizaje">
+              <Card className="bg-white/95 backdrop-blur border-2 border-slate-200 overflow-hidden group hover:border-primary/50 hover:shadow-xl transition-all duration-300 cursor-pointer h-full">
+                <CardContent className="p-5">
+                  <div className="flex flex-col items-center text-center space-y-2">
+                    <div className="w-14 h-14 rounded-full bg-gradient-to-br from-teal-400 to-green-500 flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <Target className="w-7 h-7 text-white" />
+                    </div>
+                    <h3 className="text-lg font-bold text-slate-900">Situaciones de Aprendizaje</h3>
+                    <p className="text-sm text-slate-600">Diseños didácticos</p>
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900">Situaciones de Aprendizaje</h3>
-                  <p className="text-sm text-slate-600">Diseños didácticos</p>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </Link>
 
             {/* Feature 5 - Informes */}
-            <Card className="bg-white/95 backdrop-blur border-2 border-slate-200 overflow-hidden group hover:border-primary/50 hover:shadow-xl transition-all duration-300">
-              <CardContent className="p-5">
-                <div className="flex flex-col items-center text-center space-y-2">
-                  <div className="w-14 h-14 rounded-full bg-gradient-to-br from-indigo-400 to-blue-500 flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <FileText className="w-7 h-7 text-white" />
+            <Link href="/generadores/informes">
+              <Card className="bg-white/95 backdrop-blur border-2 border-slate-200 overflow-hidden group hover:border-primary/50 hover:shadow-xl transition-all duration-300 cursor-pointer h-full">
+                <CardContent className="p-5">
+                  <div className="flex flex-col items-center text-center space-y-2">
+                    <div className="w-14 h-14 rounded-full bg-gradient-to-br from-indigo-400 to-blue-500 flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <FileText className="w-7 h-7 text-white" />
+                    </div>
+                    <h3 className="text-lg font-bold text-slate-900">Informes para familias</h3>
+                    <p className="text-sm text-slate-600">Comunicación profesional</p>
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900">Informes para familias</h3>
-                  <p className="text-sm text-slate-600">Comunicación profesional</p>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </Link>
 
             {/* Feature 6 - Generador de Ideas */}
-            <Card className="bg-white/95 backdrop-blur border-2 border-slate-200 overflow-hidden group hover:border-primary/50 hover:shadow-xl transition-all duration-300">
-              <CardContent className="p-5">
-                <div className="flex flex-col items-center text-center space-y-2">
-                  <div className="w-14 h-14 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <Lightbulb className="w-7 h-7 text-white" />
+            <Link href="/generadores/generador-ideas">
+              <Card className="bg-white/95 backdrop-blur border-2 border-slate-200 overflow-hidden group hover:border-primary/50 hover:shadow-xl transition-all duration-300 cursor-pointer h-full">
+                <CardContent className="p-5">
+                  <div className="flex flex-col items-center text-center space-y-2">
+                    <div className="w-14 h-14 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <Lightbulb className="w-7 h-7 text-white" />
+                    </div>
+                    <h3 className="text-lg font-bold text-slate-900">Generador de ideas</h3>
+                    <p className="text-sm text-slate-600">Inspiración ilimitada</p>
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900">Generador de ideas</h3>
-                  <p className="text-sm text-slate-600">Inspiración ilimitada</p>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </Link>
 
             {/* Feature 7 - Problemas de Matemáticas */}
-            <a href="https://docentia-frontend.vercel.app/generadores/problemas-matematicas.html">
+            <Link href="/generadores/problemas-matematicas">
               <Card className="bg-white/95 backdrop-blur border-2 border-slate-200 overflow-hidden group hover:border-primary/50 hover:shadow-xl transition-all duration-300 cursor-pointer h-full">
                 <CardContent className="p-5">
                   <div className="flex flex-col items-center text-center space-y-2">
@@ -205,7 +213,7 @@ export default function Page() {
                   </div>
                 </CardContent>
               </Card>
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -247,11 +255,11 @@ export default function Page() {
                 </div>
               </div>
 
-              <a href="https://docentia-frontend.vercel.app" className="block">
+              <Link href="/generadores/boton-emergencia">
                 <Button variant="outline" className="w-full">
                   Empezar gratis
                 </Button>
-              </a>
+              </Link>
             </CardContent>
           </Card>
 
@@ -266,7 +274,7 @@ export default function Page() {
               <div className="space-y-2">
                 <h3 className="text-2xl font-bold">Profesional</h3>
                 <div className="flex items-baseline gap-2">
-                  <span className="text-5xl font-bold">9.99€</span>
+                  <span className="text-5xl font-bold">10€</span>
                   <span className="text-muted-foreground">/mes</span>
                 </div>
                 <p className="text-sm text-muted-foreground">Para profesores activos</p>
@@ -295,11 +303,11 @@ export default function Page() {
                 </div>
               </div>
 
-              <a href="https://docentia-frontend.vercel.app" className="block">
+              <Link href="/generadores/boton-emergencia">
                 <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
                   Comenzar ahora
                 </Button>
-              </a>
+              </Link>
             </CardContent>
           </Card>
 
@@ -504,14 +512,14 @@ export default function Page() {
               Únete a cientos de docentes extremeños que ya están transformando su trabajo
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a href="https://docentia-frontend.vercel.app">
+              <Link href="/generadores/boton-emergencia">
                 <Button
                   size="lg"
                   className="bg-primary text-primary-foreground hover:bg-primary/90 text-xl px-12 py-8 rounded-xl font-bold shadow-lg shadow-primary/30"
                 >
                   🚀 Empezar ahora gratis
                 </Button>
-              </a>
+              </Link>
             </div>
             <div className="pt-4 space-y-2">
               <p className="text-sm text-muted-foreground font-medium">
