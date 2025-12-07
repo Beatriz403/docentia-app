@@ -1,95 +1,10 @@
+import React from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { DocentIALogo } from "@/components/docentia-logo"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { NetworkMesh } from "@/components/network-mesh"
-import { Target, FileText, Lightbulb, Calculator, Check } from "lucide-react"
-
-export default function Page() {
-  return (
-    <div className="min-h-screen">
-      {/* Header */}
-      <header className="border-b border-border/40 backdrop-blur-sm sticky top-0 z-50 bg-background/80">
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <DocentIALogo />
-            <nav className="hidden md:flex items-center gap-8">
-              <a href="#funciones" className="text-foreground/80 hover:text-foreground transition-colors text-sm">
-                Funciones
-              </a>
-              <a href="#precios" className="text-foreground/80 hover:text-foreground transition-colors text-sm">
-                Precios
-              </a>
-              <a href="#testimonios" className="text-foreground/80 hover:text-foreground transition-colors text-sm">
-                Sobre nosotros
-              </a>
-              <a href="#faq" className="text-foreground/80 hover:text-foreground transition-colors text-sm">
-                FAQ
-              </a>
-            </nav>
-            <div className="flex items-center gap-4">
-              <ThemeToggle />
-              <a href="https://docentia-frontend.vercel.app" className="hidden md:block">
-                <Button variant="outline" size="sm">
-                  Acceder
-                </Button>
-              </a>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      {/* Hero Section */}
-      <section className="circuit-pattern relative overflow-hidden">
-        <NetworkMesh />
-        <div className="container mx-auto px-6 py-20 lg:py-32 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <h1 className="text-5xl lg:text-7xl font-bold text-balance leading-tight text-white">
-                Empieza gratis con Docent<span className="text-primary">IA</span>
-              </h1>
-              <p className="text-xl lg:text-2xl text-white/90 text-pretty font-medium">
-                Simplifica tu trabajo y gana tiempo para lo importante
-              </p>
-              <p className="text-lg text-white/70 text-pretty">
-                Diseñado para docentes de Extremadura. Compatible con LOMLOE y decretos autonómicos.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <a href="https://docentia-frontend.vercel.app">
-                  <Button
-                    size="lg"
-                    className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6 rounded-xl font-semibold w-full sm:w-auto"
-                  >
-                    🚀 Acceder a los Generadores
-                  </Button>
-                </a>
-                <a href="https://docentia-frontend.vercel.app/generadores/boton-emergencia.html">
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-2 border-primary text-white hover:bg-primary/20 text-lg px-8 py-6 rounded-xl font-semibold bg-transparent backdrop-blur-sm w-full sm:w-auto"
-                  >
-                    ⚡ Probar Botón de Emergencia Gratis
-                  </Button>
-                </a>
-              </div>
-              <p className="text-sm text-white/60">
-                Sin tarjeta, sin compromiso. Botón de Emergencia gratis con 5 usos/mes.
-              </p>
-            </div>
-            <div className="relative">
-              <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full"></div>
-              <img
-                src="/images/mujer-portada.png"
-                alt="Profesora usando DocentIA con interfaz holográfica"
-                className="relative rounded-2xl w-full h-auto object-cover"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
+import { Target, FileText, Lightbulb, Calculator, Check, Zap, BookOpen, ClipboardList, BarChart3, Cpu } from "lucide-react"
 
 const features = [
   {
@@ -149,6 +64,38 @@ const features = [
     image: "/math-problems-generator.jpg",
   },
 ]
+
+export default function Page() {
+  return (
+    <div className="min-h-screen">
+      {/* Header */}
+      <header className="border-b border-border/40 backdrop-blur-sm sticky top-0 z-50 bg-background/80">
+        <div className="container mx-auto px-6 py-4">
+          <div className="flex items-center justify-between">
+            <DocentIALogo />
+            <nav className="hidden md:flex items-center gap-8">
+              <a href="#funciones" className="text-foreground/80 hover:text-foreground transition-colors text-sm">
+                Funciones
+              </a>
+              <a href="#precios" className="text-foreground/80 hover:text-foreground transition-colors text-sm">
+                Precios
+              </a>
+              <a href="#testimonios" className="text-foreground/80 hover:text-foreground transition-colors text-sm">
+                Sobre nosotros
+              </a>
+              <a href="#faq" className="text-foreground/80 hover:text-foreground transition-colors text-sm">
+                FAQ
+              </a>
+            </nav>
+            <div className="flex items-center gap-4">
+              <ThemeToggle />
+              <a href="https://docentia-frontend.vercel.app" className="hidden md:block">
+                <Button size="sm">Acceder</Button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
 
 
 
