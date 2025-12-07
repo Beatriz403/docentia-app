@@ -60,7 +60,7 @@ export default function Page() {
                     size="lg"
                     className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6 rounded-xl font-semibold w-full sm:w-auto"
                   >
-                    🚀 Acceder a los Generadores
+                    Acceder a los Generadores
                   </Button>
                 </a>
                 <a href="https://docentia-frontend.vercel.app/generadores/boton-emergencia.html">
@@ -69,7 +69,7 @@ export default function Page() {
                     variant="outline"
                     className="border-2 border-primary text-white hover:bg-primary/20 text-lg px-8 py-6 rounded-xl font-semibold bg-transparent backdrop-blur-sm w-full sm:w-auto"
                   >
-                    ⚡ Probar Botón de Emergencia Gratis
+                    Probar Botón de Emergencia Gratis
                   </Button>
                 </a>
               </div>
@@ -101,7 +101,7 @@ export default function Page() {
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {/* Feature 1 - Botón de Emergencia */}
-            <a href="https://docentia-frontend.vercel.app/generadores/boton-emergencia.html">
+            <a href="https://docentia-generadores.vercel.app/generadores/boton-emergencia">
               <Card className="bg-white overflow-hidden group hover:shadow-2xl transition-all duration-300 cursor-pointer h-full">
                 <div className="relative h-64 overflow-hidden">
                   <img
@@ -111,7 +111,7 @@ export default function Page() {
                   />
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-2xl font-bold text-slate-900 mb-2">Botón de emergencia 🚨</h3>
+                  <h3 className="text-2xl font-bold text-slate-900 mb-2">Botón de emergencia</h3>
                   <p className="text-slate-600">Genera actividades en 30 segundos para situaciones urgentes</p>
                 </CardContent>
               </Card>
@@ -122,13 +122,13 @@ export default function Page() {
               <Card className="bg-white overflow-hidden group hover:shadow-2xl transition-all duration-300 cursor-pointer h-full">
                 <div className="relative h-64 overflow-hidden">
                   <img
-                    src="/images/image-AFn1DwPHiuLFf4gRGx8rkZf331G3IH.png"
+                    src="/images/learning-units-preparation.jpg"
                     alt="Unidades didácticas - Prepara material de forma con facilidad"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-2xl font-bold text-slate-900 mb-2">Unidades didácticas 📚</h3>
+                  <h3 className="text-2xl font-bold text-slate-900 mb-2">Unidades didácticas</h3>
                   <p className="text-slate-600">Prepara material completo con facilidad</p>
                 </CardContent>
               </Card>
@@ -139,13 +139,13 @@ export default function Page() {
               <Card className="bg-white overflow-hidden group hover:shadow-2xl transition-all duration-300 cursor-pointer h-full">
                 <div className="relative h-64 overflow-hidden">
                   <img
-                    src="/images/mujer-portada.png"
+                    src="/images/automatic-exam-grading.jpg"
                     alt="Exámenes automáticos - Corrige examenes de forma eficiente"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-2xl font-bold text-slate-900 mb-2">Exámenes automáticos 📝</h3>
+                  <h3 className="text-2xl font-bold text-slate-900 mb-2">Exámenes automáticos</h3>
                   <p className="text-slate-600">Genera exámenes y crea rúbricas de evaluación</p>
                 </CardContent>
               </Card>
