@@ -8,11 +8,41 @@ import { Target, FileText, Lightbulb, Calculator, Check } from "lucide-react"
 import { Header } from "@/components/Header"
 import { FeaturesSection } from "@/components/sections/FeaturesSection"
 
+
+
 export default function Page() {
   return (
     <div className="min-h-screen">
       {/* Header */}
-      <Header />
+      <header className="border-b border-border/40 backdrop-blur-sm sticky top-0 z-50 bg-background/80">
+        <div className="container mx-auto px-6 py-4">
+          <div className="flex items-center justify-between">
+            <DocentIALogo />
+            <nav className="hidden md:flex items-center gap-8">
+              <a href="#funciones" className="text-foreground/80 hover:text-foreground transition-colors text-sm">
+                Funciones
+              </a>
+              <a href="#precios" className="text-foreground/80 hover:text-foreground transition-colors text-sm">
+                Precios
+              </a>
+              <a href="#testimonios" className="text-foreground/80 hover:text-foreground transition-colors text-sm">
+                Sobre nosotros
+              </a>
+              <a href="#faq" className="text-foreground/80 hover:text-foreground transition-colors text-sm">
+                FAQ
+              </a>
+            </nav>
+            <div className="flex items-center gap-4">
+              <ThemeToggle />
+              <Link href="/generadores/boton-emergencia">
+                <Button variant="outline" size="sm">
+                  Acceder
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </header>
 
       {/* Hero Section */}
       <section className="circuit-pattern relative overflow-hidden">
@@ -27,7 +57,7 @@ export default function Page() {
                 Simplifica tu trabajo y gana tiempo para lo importante
               </p>
               <p className="text-lg text-white/70 text-pretty">
-                Compatible con LOMLOE y decretos autonómicos.
+               Compatible con LOMLOE y decretos autonómicos.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/generadores/boton-emergencia">
@@ -65,7 +95,131 @@ export default function Page() {
       </section>
 
       {/* Features Section */}
-      <FeaturesSection />
+      <section id="funciones" className="bg-gradient-to-b from-slate-700 to-slate-600 py-20">
+        <div className="container mx-auto px-6">
+          <div className="space-y-4 mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white">Funciones</h2>
+            <p className="text-xl text-slate-200 max-w-3xl">
+              Con DocentIA optimizas tu labor con varias herramientas que agilizan tu trabajo
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            {/* Feature 1 - Botón de Emergencia */}
+            <Link href="/generadores/boton-emergencia">
+              <Card className="bg-white overflow-hidden group hover:shadow-2xl transition-all duration-300 cursor-pointer h-full">
+                <div className="relative h-64 overflow-hidden">
+                  <img
+                    src="/images/emergency-button-teacher.jpg"
+                    alt="Botón de emergencia - Actividades completas en 30 segundos para situaciones imprevistas"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-2xl font-bold text-slate-900 mb-2">Botón de emergencia</h3>
+                  <p className="text-slate-600">Genera actividades en 30 segundos para situaciones urgentes</p>
+                </CardContent>
+              </Card>
+            </Link>
+
+            {/* Feature 2 - Unidades Didácticas */}
+            <Link href="/generadores/unidades-didacticas">
+              <Card className="bg-white overflow-hidden group hover:shadow-2xl transition-all duration-300 cursor-pointer h-full">
+                <div className="relative h-64 overflow-hidden">
+                  <img
+                    src="/images/learning-units-preparation.jpg"
+                    alt="Unidades didácticas - Prepara material de forma con facilidad"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-2xl font-bold text-slate-900 mb-2">Unidades didácticas</h3>
+                  <p className="text-slate-600">Prepara material completo con facilidad</p>
+                </CardContent>
+              </Card>
+            </Link>
+
+            {/* Feature 3 - Exámenes Automáticos con Rúbricas */}
+            <Link href="/generadores/examenes-automaticos">
+              <Card className="bg-white overflow-hidden group hover:shadow-2xl transition-all duration-300 cursor-pointer h-full">
+                <div className="relative h-64 overflow-hidden">
+                  <img
+                    src="/images/automatic-exam-grading.jpg"
+                    alt="Exámenes automáticos - Corrige examenes de forma eficiente"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-2xl font-bold text-slate-900 mb-2">Exámenes automáticos</h3>
+                  <p className="text-slate-600">Genera exámenes y crea rúbricas de evaluación</p>
+                </CardContent>
+              </Card>
+            </Link>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mt-16">
+            {/* Feature 4 - Situaciones de Aprendizaje */}
+            <Link href="/generadores/situaciones-aprendizaje">
+              <Card className="bg-white/95 backdrop-blur border-2 border-slate-200 overflow-hidden group hover:border-primary/50 hover:shadow-xl transition-all duration-300 cursor-pointer h-full">
+                <CardContent className="p-5">
+                  <div className="flex flex-col items-center text-center space-y-2">
+                    <div className="w-14 h-14 rounded-full bg-gradient-to-br from-teal-400 to-green-500 flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <Target className="w-7 h-7 text-white" />
+                    </div>
+                    <h3 className="text-lg font-bold text-slate-900">Situaciones de Aprendizaje</h3>
+                    <p className="text-sm text-slate-600">Diseños didácticos</p>
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
+
+            {/* Feature 5 - Informes */}
+            <Link href="/generadores/informes">
+              <Card className="bg-white/95 backdrop-blur border-2 border-slate-200 overflow-hidden group hover:border-primary/50 hover:shadow-xl transition-all duration-300 cursor-pointer h-full">
+                <CardContent className="p-5">
+                  <div className="flex flex-col items-center text-center space-y-2">
+                    <div className="w-14 h-14 rounded-full bg-gradient-to-br from-indigo-400 to-blue-500 flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <FileText className="w-7 h-7 text-white" />
+                    </div>
+                    <h3 className="text-lg font-bold text-slate-900">Informes para familias</h3>
+                    <p className="text-sm text-slate-600">Comunicación profesional</p>
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
+
+            {/* Feature 6 - Generador de Ideas */}
+            <Link href="/generadores/generador-ideas">
+              <Card className="bg-white/95 backdrop-blur border-2 border-slate-200 overflow-hidden group hover:border-primary/50 hover:shadow-xl transition-all duration-300 cursor-pointer h-full">
+                <CardContent className="p-5">
+                  <div className="flex flex-col items-center text-center space-y-2">
+                    <div className="w-14 h-14 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <Lightbulb className="w-7 h-7 text-white" />
+                    </div>
+                    <h3 className="text-lg font-bold text-slate-900">Generador de ideas</h3>
+                    <p className="text-sm text-slate-600">Inspiración ilimitada</p>
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
+
+            {/* Feature 7 - Problemas de Matemáticas */}
+            <Link href="/generadores/problemas-matematicas">
+              <Card className="bg-white/95 backdrop-blur border-2 border-slate-200 overflow-hidden group hover:border-primary/50 hover:shadow-xl transition-all duration-300 cursor-pointer h-full">
+                <CardContent className="p-5">
+                  <div className="flex flex-col items-center text-center space-y-2">
+                    <div className="w-14 h-14 rounded-full bg-gradient-to-br from-purple-400 to-pink-500 flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <Calculator className="w-7 h-7 text-white" />
+                    </div>
+                    <h3 className="text-lg font-bold text-slate-900">Problemas de Matemáticas</h3>
+                    <p className="text-sm text-slate-600">Con soluciones paso a paso</p>
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* Pricing Section */}
       <section id="precios" className="container mx-auto px-6 py-20">
@@ -213,34 +367,70 @@ export default function Page() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {/* Testimonial Cards */}
-            {[ 
-              { img: "/images/teacher-avatar.jpg", name: "María G.", city: "Cáceres", text: "DocentIA me ha cambiado la vida. Lo que antes me llevaba horas ahora lo tengo en minutos. Increíble." },
-              { img: "/images/professor-avatar.jpg", name: "Javier L.", city: "Badajoz", text: "El botón de emergencia me salvó cuando el sustituto no llegó. En 30 segundos tenía una actividad completa lista." },
-              { img: "/images/educator-avatar.jpg", name: "Beatriz S.", city: "Mérida", text: "He pasado de hacer muchas tareas a tener una plataforma que lo simplifica todo. Ahorro horas cada semana." }
-            ].map((t, i) => (
-              <Card key={i} className="bg-card border-border/50 hover:border-primary/30 transition-colors">
-                <CardContent className="p-6 space-y-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden flex-shrink-0">
-                      <img src={t.img} alt={t.name} className="w-full h-full object-cover" />
-                    </div>
-                    <div className="flex-1">
-                      <p className="text-foreground/90 text-pretty leading-relaxed">{t.text}</p>
-                    </div>
+            {/* Testimonial 1 */}
+            <Card className="bg-card border-border/50 hover:border-primary/30 transition-colors">
+              <CardContent className="p-6 space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden flex-shrink-0">
+                    <img src="/images/teacher-avatar.jpg" alt="María G." className="w-full h-full object-cover" />
                   </div>
-                  <div>
-                    <p className="font-bold text-foreground">{t.name}</p>
-                    <p className="text-sm text-muted-foreground">Profesor/a - {t.city}</p>
+                  <div className="flex-1">
+                    <p className="text-foreground/90 text-pretty leading-relaxed">
+                      "DocentIA me ha cambiado la vida. Lo que antes me llevaba horas ahora lo tengo en minutos. Increíble."
+                    </p>
                   </div>
-                </CardContent>
-              </Card>
-            ))}
+                </div>
+                <div>
+                  <p className="font-bold text-foreground">María G.</p>
+                  <p className="text-sm text-muted-foreground">Profesora - Cáceres</p>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Testimonial 2 */}
+            <Card className="bg-card border-border/50 hover:border-primary/30 transition-colors">
+              <CardContent className="p-6 space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden flex-shrink-0">
+                    <img src="/images/professor-avatar.jpg" alt="Javier L." className="w-full h-full object-cover" />
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-foreground/90 text-pretty leading-relaxed">
+                      "El botón de emergencia me salvó cuando el sustituto no llegó. En 30 segundos tenía una actividad completa lista."
+                    </p>
+                  </div>
+                </div>
+                <div>
+                  <p className="font-bold text-foreground">Javier L.</p>
+                  <p className="text-sm text-muted-foreground">Profesor - Badajoz</p>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Testimonial 3 */}
+            <Card className="bg-card border-border/50 hover:border-primary/30 transition-colors">
+              <CardContent className="p-6 space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden flex-shrink-0">
+                    <img src="/images/educator-avatar.jpg" alt="Beatriz S." className="w-full h-full object-cover" />
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-foreground/90 text-pretty leading-relaxed">
+                      "He pasado de hacer muchas tareas a tener una plataforma que lo simplifica todo. Ahorro horas cada
+                      semana."
+                    </p>
+                  </div>
+                </div>
+                <div>
+                  <p className="font-bold text-foreground">Beatriz S.</p>
+                  <p className="text-sm text-muted-foreground">Profesora - Mérida</p>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
 
-      {/* FAQ Section */}
       <section id="faq" className="container mx-auto px-6 py-20">
         <div className="space-y-6 mb-16 text-center">
           <h2 className="text-4xl lg:text-5xl font-bold text-balance">Preguntas frecuentes</h2>
@@ -250,21 +440,65 @@ export default function Page() {
         </div>
 
         <div className="max-w-4xl mx-auto space-y-4">
-          {[
-            { q: "¿Necesito conocimientos técnicos para usar DocentIA?", a: "No, DocentIA está diseñado para ser intuitivo y fácil de usar. Solo necesitas saber lo que quieres crear y la plataforma genera el contenido por ti en segundos." },
-            { q: "¿El contenido generado cumple con la LOMLOE?", a: "Sí, todo el contenido está actualizado según la LOMLOE y los decretos específicos de Extremadura. Puedes personalizarlo según tus necesidades específicas." },
-            { q: "¿Puedo cancelar mi suscripción en cualquier momento?", a: "Sí, puedes cancelar tu suscripción cuando quieras sin penalizaciones. Si cancelas, seguirás teniendo acceso hasta el final del período de facturación." },
-            { q: "¿Qué incluye el Botón de Emergencia gratuito?", a: "El plan gratuito incluye 5 usos al mes del Botón de Emergencia, que genera actividades completas en 30 segundos. Es perfecto para situaciones imprevistas o para probar la plataforma." },
-            { q: "¿Ofrecen descuentos para centros educativos?", a: "Sí, ofrecemos planes personalizados para centros educativos con descuentos según el número de licencias. Contacta con nosotros para una propuesta a medida." },
-            { q: "¿Mis datos están seguros?", a: "Absolutamente. Cumplimos con el RGPD y todas las normativas de protección de datos. Tus documentos y contenidos son privados y no se comparten con terceros." }
-          ].map((item, i) => (
-            <Card key={i} className="bg-card border-border/50">
-              <CardContent className="p-6">
-                <h3 className="text-lg font-bold mb-3">{item.q}</h3>
-                <p className="text-muted-foreground text-pretty">{item.a}</p>
-              </CardContent>
-            </Card>
-          ))}
+          <Card className="bg-card border-border/50">
+            <CardContent className="p-6">
+              <h3 className="text-lg font-bold mb-3">¿Necesito conocimientos técnicos para usar DocentIA?</h3>
+              <p className="text-muted-foreground text-pretty">
+                No, DocentIA está diseñado para ser intuitivo y fácil de usar. Solo necesitas saber lo que quieres crear
+                y la plataforma genera el contenido por ti en segundos.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-card border-border/50">
+            <CardContent className="p-6">
+              <h3 className="text-lg font-bold mb-3">¿El contenido generado cumple con la LOMLOE?</h3>
+              <p className="text-muted-foreground text-pretty">
+                Sí, todo el contenido está actualizado según la LOMLOE y los decretos específicos de Extremadura. Puedes
+                personalizarlo según tus necesidades específicas.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-card border-border/50">
+            <CardContent className="p-6">
+              <h3 className="text-lg font-bold mb-3">¿Puedo cancelar mi suscripción en cualquier momento?</h3>
+              <p className="text-muted-foreground text-pretty">
+                Sí, puedes cancelar tu suscripción cuando quieras sin penalizaciones. Si cancelas, seguirás teniendo
+                acceso hasta el final del período de facturación.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-card border-border/50">
+            <CardContent className="p-6">
+              <h3 className="text-lg font-bold mb-3">¿Qué incluye el Botón de Emergencia gratuito?</h3>
+              <p className="text-muted-foreground text-pretty">
+                El plan gratuito incluye 5 usos al mes del Botón de Emergencia, que genera actividades completas en 30
+                segundos. Es perfecto para situaciones imprevistas o para probar la plataforma.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-card border-border/50">
+            <CardContent className="p-6">
+              <h3 className="text-lg font-bold mb-3">¿Ofrecen descuentos para centros educativos?</h3>
+              <p className="text-muted-foreground text-pretty">
+                Sí, ofrecemos planes personalizados para centros educativos con descuentos según el número de licencias.
+                Contacta con nosotros para una propuesta a medida.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-card border-border/50">
+            <CardContent className="p-6">
+              <h3 className="text-lg font-bold mb-3">¿Mis datos están seguros?</h3>
+              <p className="text-muted-foreground text-pretty">
+                Absolutamente. Cumplimos con el RGPD y todas las normativas de protección de datos. Tus documentos y
+                contenidos son privados y no se comparten con terceros.
+              </p>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
@@ -302,9 +536,11 @@ export default function Page() {
 
       {/* Footer */}
       <footer className="border-t border-border/40 mt-20">
-        <div className="container mx-auto px-6 py-12 flex justify-between items-center">
-          <DocentIALogo />
-          <p className="text-sm text-muted-foreground">© 2025 DocentIA. Diseñado para docentes de Extremadura.</p>
+        <div className="container mx-auto px-6 py-12">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+            <DocentIALogo />
+            <p className="text-sm text-muted-foreground">© 2025 DocentIA. Diseñado para docentes de Extremadura.</p>
+          </div>
         </div>
       </footer>
     </div>
