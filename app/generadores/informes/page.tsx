@@ -7,17 +7,17 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Badge } from "@/components/ui/badge"
-import { Loader2, Download, Zap } from "lucide-react"
+import { Loader2, Download, BarChart3 } from "lucide-react"
 
-export default function ProblemasMat() {
+export default function Informes() {
   const [formData, setFormData] = useState({
-    nivel: "",
-    tema: "",
-    dificultad: "",
-    cantidad: "",
+    periodo: "",
+    estudiante: "",
+    asignatura: "",
+    observaciones: "",
   })
 
   const [loading, setLoading] = useState(false)
@@ -28,7 +28,7 @@ export default function ProblemasMat() {
     setLoading(true)
 
     try {
-      const response = await fetch("https://docentia-backend.onrender.com/generar/problemas-matematicas", {
+      const response = await fetch("https://docentia-backend.onrender.com/generar/informes", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -38,14 +38,14 @@ export default function ProblemasMat() {
       setResult(data.resultado || data.message)
     } catch (error) {
       console.error("Error:", error)
-      setResult("Error al generar problemas. Intenta nuevamente.")
+      setResult("Error al generar el informe. Intenta nuevamente.")
     } finally {
       setLoading(false)
     }
   }
 
   const handleReset = () => {
-    setFormData({ nivel: "", tema: "", dificultad: "", cantidad: "" })
+    setFormData({ periodo: "", estudiante: "", asignatura: "", observaciones: "" })
     setResult(null)
   }
 
@@ -54,7 +54,7 @@ export default function ProblemasMat() {
     const element = document.createElement("a")
     const file = new Blob([result], { type: "text/plain" })
     element.href = URL.createObjectURL(file)
-    element.download = "problemas-matematicas.txt"
+    element.download = "informe.txt"
     document.body.appendChild(element)
     element.click()
     document.body.removeChild(element)
@@ -76,16 +76,12 @@ export default function ProblemasMat() {
         <div className="container max-w-4xl mx-auto relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h1 className="text-5xl md:text-6xl font-bold text-white text-balance">Problemas de Matemáticas</h1>
-              <p className="text-xl text-muted-foreground">Crea ejercicios personalizados de matemáticas</p>
-              <Badge className="w-fit bg-primary/20 text-primary border-primary">🔢 Generación inteligente</Badge>
+              <h1 className="text-5xl md:text-6xl font-bold text-white text-balance">Informes</h1>
+              <p className="text-xl text-muted-foreground">Genera reportes detallados de progreso</p>
+              <Badge className="w-fit bg-primary/20 text-primary border-primary">📊 Reportes automatizados</Badge>
             </div>
 
-            <img
-              src="/placeholder.svg?height=400&width=400"
-              alt="Problemas de Matemáticas"
-              className="rounded-2xl shadow-2xl"
-            />
+            <img src="/placeholder.svg?height=400&width=400" alt="Informes" className="rounded-2xl shadow-2xl" />
           </div>
         </div>
       </section>
@@ -97,65 +93,59 @@ export default function ProblemasMat() {
             <Card className="bg-card border border-border p-8 space-y-6">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-2">
-                  <label className="text-sm font-medium text-foreground">Nivel Educativo</label>
-                  <Select value={formData.nivel} onValueChange={(value) => setFormData({ ...formData, nivel: value })}>
-                    <SelectTrigger className="bg-input border-border">
-                      <SelectValue placeholder="Selecciona el nivel" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="primaria">Primaria</SelectItem>
-                      <SelectItem value="eso">ESO</SelectItem>
-                      <SelectItem value="bachillerato">Bachillerato</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-
-                <div className="space-y-2">
-                  <label className="text-sm font-medium text-foreground">Tema</label>
-                  <Select value={formData.tema} onValueChange={(value) => setFormData({ ...formData, tema: value })}>
-                    <SelectTrigger className="bg-input border-border">
-                      <SelectValue placeholder="Selecciona el tema" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="operaciones-basicas">Operaciones Básicas</SelectItem>
-                      <SelectItem value="fracciones">Fracciones</SelectItem>
-                      <SelectItem value="decimales">Decimales</SelectItem>
-                      <SelectItem value="porcentajes">Porcentajes</SelectItem>
-                      <SelectItem value="algebra">Álgebra</SelectItem>
-                      <SelectItem value="ecuaciones">Ecuaciones</SelectItem>
-                      <SelectItem value="geometria">Geometría</SelectItem>
-                      <SelectItem value="trigonometria">Trigonometría</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-
-                <div className="space-y-2">
-                  <label className="text-sm font-medium text-foreground">Dificultad</label>
+                  <label className="text-sm font-medium text-foreground">Período</label>
                   <Select
-                    value={formData.dificultad}
-                    onValueChange={(value) => setFormData({ ...formData, dificultad: value })}
+                    value={formData.periodo}
+                    onValueChange={(value) => setFormData({ ...formData, periodo: value })}
                   >
                     <SelectTrigger className="bg-input border-border">
-                      <SelectValue placeholder="Selecciona la dificultad" />
+                      <SelectValue placeholder="Selecciona el período" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="basica">Básica</SelectItem>
-                      <SelectItem value="media">Media</SelectItem>
-                      <SelectItem value="avanzada">Avanzada</SelectItem>
+                      <SelectItem value="primer-trimestre">Primer Trimestre</SelectItem>
+                      <SelectItem value="segundo-trimestre">Segundo Trimestre</SelectItem>
+                      <SelectItem value="tercer-trimestre">Tercer Trimestre</SelectItem>
+                      <SelectItem value="anual">Anual</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-sm font-medium text-foreground">Cantidad de Problemas</label>
-                  <Input
-                    type="number"
-                    min="1"
-                    max="50"
-                    placeholder="Ej: 10"
-                    className="bg-input border-border"
-                    value={formData.cantidad}
-                    onChange={(e) => setFormData({ ...formData, cantidad: e.target.value })}
+                  <label className="text-sm font-medium text-foreground">Estudiante/Grupo</label>
+                  <Textarea
+                    placeholder="Nombre del estudiante o grupo..."
+                    className="bg-input border-border min-h-20"
+                    value={formData.estudiante}
+                    onChange={(e) => setFormData({ ...formData, estudiante: e.target.value })}
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <label className="text-sm font-medium text-foreground">Asignatura</label>
+                  <Select
+                    value={formData.asignatura}
+                    onValueChange={(value) => setFormData({ ...formData, asignatura: value })}
+                  >
+                    <SelectTrigger className="bg-input border-border">
+                      <SelectValue placeholder="Selecciona la asignatura" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="matematicas">Matemáticas</SelectItem>
+                      <SelectItem value="lengua">Lengua</SelectItem>
+                      <SelectItem value="ingles">Inglés</SelectItem>
+                      <SelectItem value="ciencias">Ciencias</SelectItem>
+                      <SelectItem value="historia">Historia</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+
+                <div className="space-y-2">
+                  <label className="text-sm font-medium text-foreground">Observaciones</label>
+                  <Textarea
+                    placeholder="Incluye observaciones relevantes..."
+                    className="bg-input border-border min-h-32"
+                    value={formData.observaciones}
+                    onChange={(e) => setFormData({ ...formData, observaciones: e.target.value })}
                   />
                 </div>
 
@@ -172,8 +162,8 @@ export default function ProblemasMat() {
                       </>
                     ) : (
                       <>
-                        <Zap className="w-4 h-4 mr-2" />
-                        Generar Problemas
+                        <BarChart3 className="w-4 h-4 mr-2" />
+                        Generar Informe
                       </>
                     )}
                   </Button>
@@ -191,7 +181,7 @@ export default function ProblemasMat() {
           ) : (
             <Card className="bg-card border border-border p-8 space-y-6">
               <div className="space-y-4">
-                <h2 className="text-2xl font-bold text-white">Problemas Generados</h2>
+                <h2 className="text-2xl font-bold text-white">Informe Generado</h2>
                 <div className="bg-input border border-border rounded-lg p-6 max-h-96 overflow-y-auto">
                   <p className="text-foreground whitespace-pre-wrap">{result}</p>
                 </div>
@@ -210,7 +200,7 @@ export default function ProblemasMat() {
                   className="flex-1 bg-primary/20 hover:bg-primary/30 text-primary border border-primary h-12"
                   variant="outline"
                 >
-                  Nuevos Problemas
+                  Nuevo Informe
                 </Button>
               </div>
             </Card>

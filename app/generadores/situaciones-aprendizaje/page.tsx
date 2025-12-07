@@ -7,17 +7,17 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Badge } from "@/components/ui/badge"
-import { Loader2, Download, Zap } from "lucide-react"
+import { Loader2, Download, Lightbulb } from "lucide-react"
 
-export default function ProblemasMat() {
+export default function SituacionesAprendizaje() {
   const [formData, setFormData] = useState({
     nivel: "",
-    tema: "",
-    dificultad: "",
-    cantidad: "",
+    asignatura: "",
+    descripcion: "",
+    competencias: "",
   })
 
   const [loading, setLoading] = useState(false)
@@ -28,7 +28,7 @@ export default function ProblemasMat() {
     setLoading(true)
 
     try {
-      const response = await fetch("https://docentia-backend.onrender.com/generar/problemas-matematicas", {
+      const response = await fetch("https://docentia-backend.onrender.com/generar/situaciones-aprendizaje", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -38,14 +38,14 @@ export default function ProblemasMat() {
       setResult(data.resultado || data.message)
     } catch (error) {
       console.error("Error:", error)
-      setResult("Error al generar problemas. Intenta nuevamente.")
+      setResult("Error al generar la situación. Intenta nuevamente.")
     } finally {
       setLoading(false)
     }
   }
 
   const handleReset = () => {
-    setFormData({ nivel: "", tema: "", dificultad: "", cantidad: "" })
+    setFormData({ nivel: "", asignatura: "", descripcion: "", competencias: "" })
     setResult(null)
   }
 
@@ -54,7 +54,7 @@ export default function ProblemasMat() {
     const element = document.createElement("a")
     const file = new Blob([result], { type: "text/plain" })
     element.href = URL.createObjectURL(file)
-    element.download = "problemas-matematicas.txt"
+    element.download = "situacion-aprendizaje.txt"
     document.body.appendChild(element)
     element.click()
     document.body.removeChild(element)
@@ -76,16 +76,12 @@ export default function ProblemasMat() {
         <div className="container max-w-4xl mx-auto relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h1 className="text-5xl md:text-6xl font-bold text-white text-balance">Problemas de Matemáticas</h1>
-              <p className="text-xl text-muted-foreground">Crea ejercicios personalizados de matemáticas</p>
-              <Badge className="w-fit bg-primary/20 text-primary border-primary">🔢 Generación inteligente</Badge>
+              <h1 className="text-5xl md:text-6xl font-bold text-white text-balance">Situaciones de Aprendizaje</h1>
+              <p className="text-xl text-muted-foreground">Crea contextos educativos enriquecedores</p>
+              <Badge className="w-fit bg-primary/20 text-primary border-primary">💡 Aprendizaje experiencial</Badge>
             </div>
 
-            <img
-              src="/placeholder.svg?height=400&width=400"
-              alt="Problemas de Matemáticas"
-              className="rounded-2xl shadow-2xl"
-            />
+            <img src="/learning-situations-classroom.jpg" alt="Situaciones de Aprendizaje" className="rounded-2xl shadow-2xl" />
           </div>
         </div>
       </section>
@@ -111,51 +107,41 @@ export default function ProblemasMat() {
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-sm font-medium text-foreground">Tema</label>
-                  <Select value={formData.tema} onValueChange={(value) => setFormData({ ...formData, tema: value })}>
-                    <SelectTrigger className="bg-input border-border">
-                      <SelectValue placeholder="Selecciona el tema" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="operaciones-basicas">Operaciones Básicas</SelectItem>
-                      <SelectItem value="fracciones">Fracciones</SelectItem>
-                      <SelectItem value="decimales">Decimales</SelectItem>
-                      <SelectItem value="porcentajes">Porcentajes</SelectItem>
-                      <SelectItem value="algebra">Álgebra</SelectItem>
-                      <SelectItem value="ecuaciones">Ecuaciones</SelectItem>
-                      <SelectItem value="geometria">Geometría</SelectItem>
-                      <SelectItem value="trigonometria">Trigonometría</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-
-                <div className="space-y-2">
-                  <label className="text-sm font-medium text-foreground">Dificultad</label>
+                  <label className="text-sm font-medium text-foreground">Asignatura</label>
                   <Select
-                    value={formData.dificultad}
-                    onValueChange={(value) => setFormData({ ...formData, dificultad: value })}
+                    value={formData.asignatura}
+                    onValueChange={(value) => setFormData({ ...formData, asignatura: value })}
                   >
                     <SelectTrigger className="bg-input border-border">
-                      <SelectValue placeholder="Selecciona la dificultad" />
+                      <SelectValue placeholder="Selecciona la asignatura" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="basica">Básica</SelectItem>
-                      <SelectItem value="media">Media</SelectItem>
-                      <SelectItem value="avanzada">Avanzada</SelectItem>
+                      <SelectItem value="matematicas">Matemáticas</SelectItem>
+                      <SelectItem value="lengua">Lengua</SelectItem>
+                      <SelectItem value="ingles">Inglés</SelectItem>
+                      <SelectItem value="ciencias">Ciencias</SelectItem>
+                      <SelectItem value="historia">Historia</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-sm font-medium text-foreground">Cantidad de Problemas</label>
-                  <Input
-                    type="number"
-                    min="1"
-                    max="50"
-                    placeholder="Ej: 10"
-                    className="bg-input border-border"
-                    value={formData.cantidad}
-                    onChange={(e) => setFormData({ ...formData, cantidad: e.target.value })}
+                  <label className="text-sm font-medium text-foreground">Descripción de la Situación</label>
+                  <Textarea
+                    placeholder="Describe el contexto de la situación de aprendizaje..."
+                    className="bg-input border-border min-h-32"
+                    value={formData.descripcion}
+                    onChange={(e) => setFormData({ ...formData, descripcion: e.target.value })}
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <label className="text-sm font-medium text-foreground">Competencias a Desarrollar</label>
+                  <Textarea
+                    placeholder="Especifica las competencias..."
+                    className="bg-input border-border min-h-24"
+                    value={formData.competencias}
+                    onChange={(e) => setFormData({ ...formData, competencias: e.target.value })}
                   />
                 </div>
 
@@ -172,8 +158,8 @@ export default function ProblemasMat() {
                       </>
                     ) : (
                       <>
-                        <Zap className="w-4 h-4 mr-2" />
-                        Generar Problemas
+                        <Lightbulb className="w-4 h-4 mr-2" />
+                        Generar Situación
                       </>
                     )}
                   </Button>
@@ -191,7 +177,7 @@ export default function ProblemasMat() {
           ) : (
             <Card className="bg-card border border-border p-8 space-y-6">
               <div className="space-y-4">
-                <h2 className="text-2xl font-bold text-white">Problemas Generados</h2>
+                <h2 className="text-2xl font-bold text-white">Situación Generada</h2>
                 <div className="bg-input border border-border rounded-lg p-6 max-h-96 overflow-y-auto">
                   <p className="text-foreground whitespace-pre-wrap">{result}</p>
                 </div>
@@ -210,7 +196,7 @@ export default function ProblemasMat() {
                   className="flex-1 bg-primary/20 hover:bg-primary/30 text-primary border border-primary h-12"
                   variant="outline"
                 >
-                  Nuevos Problemas
+                  Nueva Situación
                 </Button>
               </div>
             </Card>
