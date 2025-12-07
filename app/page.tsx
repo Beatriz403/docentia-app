@@ -361,7 +361,7 @@ export default function Page() {
               <CardContent className="p-6 space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden flex-shrink-0">
-                    <img src="/images/image.png" alt="María G." className="w-full h-full object-cover" />
+                    <img src="/images/teacher-avatar.jpg" alt="María G." className="w-full h-full object-cover" />
                   </div>
                   <div className="flex-1">
                     <p className="text-foreground/90 text-pretty leading-relaxed">
@@ -381,7 +381,7 @@ export default function Page() {
               <CardContent className="p-6 space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden flex-shrink-0">
-                    <img src="/images/image.png" alt="Javier L." className="w-full h-full object-cover" />
+                    <img src="/images/professor-avatar.jpg" alt="Javier L." className="w-full h-full object-cover" />
                   </div>
                   <div className="flex-1">
                     <p className="text-foreground/90 text-pretty leading-relaxed">
@@ -402,7 +402,7 @@ export default function Page() {
               <CardContent className="p-6 space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden flex-shrink-0">
-                    <img src="/images/image.png" alt="Beatriz S." className="w-full h-full object-cover" />
+                    <img src="/images/educator-avatar.jpg" alt="Beatriz S." className="w-full h-full object-cover" />
                   </div>
                   <div className="flex-1">
                     <p className="text-foreground/90 text-pretty leading-relaxed">
