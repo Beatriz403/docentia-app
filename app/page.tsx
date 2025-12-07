@@ -52,7 +52,7 @@ export default function Page() {
                 Simplifica tu trabajo y gana tiempo para lo importante
               </p>
               <p className="text-lg text-white/70 text-pretty">
-                Diseñado para docentes de Extremadura. Compatible con LOMLOE y decretos autonómicos.
+               Compatible con LOMLOE y decretos autonómicos.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a href="https://docentia-frontend.vercel.app">
@@ -60,7 +60,7 @@ export default function Page() {
                     size="lg"
                     className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6 rounded-xl font-semibold w-full sm:w-auto"
                   >
-                    Acceder a los Generadores
+                    Crea tu cuenta
                   </Button>
                 </a>
                 <a href="https://docentia-frontend.vercel.app/generadores/boton-emergencia.html">
@@ -69,7 +69,7 @@ export default function Page() {
                     variant="outline"
                     className="border-2 border-primary text-white hover:bg-primary/20 text-lg px-8 py-6 rounded-xl font-semibold bg-transparent backdrop-blur-sm w-full sm:w-auto"
                   >
-                    Probar Botón de Emergencia Gratis
+                    Prueba gratis
                   </Button>
                 </a>
               </div>
