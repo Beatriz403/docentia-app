@@ -1,113 +1,76 @@
-"use client"
+import type React from "react"
+import type { Metadata } from "next"
+import { Geist, Geist_Mono } from "next/font/google"
+import { Analytics } from "@vercel/analytics/next"
+import "./globals.css"
 
-import { useState, useEffect } from "react"
-import Link from "next/link"
-import { Moon, Sun } from "lucide-react"
+import { Header } from "@/components/header"
+import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import { Target, FileText, Lightbulb, Calculator, Check } from "lucide-react"
+import { DocentIALogo } from "@/components/docentia-logo"
 
-const generateCircuitPoints = () => {
-  const points = []
-  for (let i = 0; i < 15; i++) {
-    points.push({
-      x: Math.random() * 100,
-      y: Math.random() * 100,
-      size: 1.5 + Math.random() * 1.5,
-      delay: Math.random() * 3,
-      depth: Math.random(), // added depth layer
-    })
-  }
-  return points
+const _geist = Geist({ subsets: ["latin"] })
+const _geistMono = Geist_Mono({ subsets: ["latin"] })
+
+export const metadata: Metadata = {
+  title: "v0 App",
+  description: "Created with v0",
+  generator: "v0.app",
 }
 
-export function Header() {
-  const [isDark, setIsDark] = useState(true)
-  const [mounted, setMounted] = useState(false)
-  const [circuitPoints] = useState(generateCircuitPoints())
-
-  useEffect(() => {
-    setMounted(true)
-    const savedTheme = localStorage.getItem("theme")
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches
-    const shouldBeDark = savedTheme ? savedTheme === "dark" : prefersDark
-
-    if (shouldBeDark) {
-      document.documentElement.classList.add("dark")
-      setIsDark(true)
-    } else {
-      document.documentElement.classList.remove("dark")
-      setIsDark(false)
-    }
-  }, [])
-
-  const toggleDarkMode = () => {
-    const html = document.documentElement
-    const newIsDark = !isDark
-
-    if (newIsDark) {
-      html.classList.add("dark")
-      localStorage.setItem("theme", "dark")
-    } else {
-      html.classList.remove("dark")
-      localStorage.setItem("theme", "light")
-    }
-
-    setIsDark(newIsDark)
-  }
-
-  if (!mounted) return null
-
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border bg-background">
-      <div className="container relative z-10 flex h-20 max-w-7xl items-center justify-between px-4 md:px-6">
-        {/* Logo */}
-        <Link
-          href="/"
-          className="flex items-center gap-2 font-bold text-sm md:text-base hover:opacity-80 transition-opacity flex-shrink-0"
-        >
-          <img src="/docentia-logo.png" alt="DocentIA" className="h-14 w-auto" />
-        </Link>
+    <html lang="en" className="dark">
+      <body className="font-sans antialiased min-h-screen bg-background">
+        {/* Header personalizado */}
+        <Header />
 
-        {/* Navigation */}
-        <nav className="hidden md:flex items-center gap-8 absolute left-1/2 transform -translate-x-1/2">
-          <Link href="/#funciones" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
-            Funciones
-          </Link>
-          <Link href="/#planes" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
-            Planes
-          </Link>
-          <Link
-            href="/#testimonios"
-            className="text-sm font-medium text-foreground hover:text-primary transition-colors"
-          >
-            Testimonios
-          </Link>
-          <Link href="/#faq" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
-            FAQ
-          </Link>
-        </nav>
+        {/* Contenido principal */}
+        <main className="container mx-auto px-6 py-20">
+          {/* Sección de cards de la segunda página */}
+          <section className="grid md:grid-cols-3 gap-8 mb-12">
+            <Card className="bg-white/95 backdrop-blur border-2 border-slate-200 overflow-hidden group hover:border-primary/50 hover:shadow-xl transition-all duration-300">
+              <CardContent className="p-5 text-center">
+                <Target className="w-10 h-10 text-primary mx-auto mb-3" />
+                <h3 className="text-lg font-bold text-slate-900">Card 1</h3>
+                <p className="text-sm text-slate-600">Descripción de la card 1</p>
+              </CardContent>
+            </Card>
 
-        {/* Theme Toggle */}
-        <Button variant="ghost" size="icon" onClick={toggleDarkMode} className="flex-shrink-0">
-          {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-        </Button>
-      </div>
+            <Card className="bg-white/95 backdrop-blur border-2 border-slate-200 overflow-hidden group hover:border-primary/50 hover:shadow-xl transition-all duration-300">
+              <CardContent className="p-5 text-center">
+                <FileText className="w-10 h-10 text-blue-500 mx-auto mb-3" />
+                <h3 className="text-lg font-bold text-slate-900">Card 2</h3>
+                <p className="text-sm text-slate-600">Descripción de la card 2</p>
+              </CardContent>
+            </Card>
 
-      <style>{`
-        @keyframes pulseBright {
-          0%, 100% { opacity: 0.9; }
-          50% { opacity: 1; }
-        }
-        
-        @keyframes pulseGlow {
-          0%, 100% { opacity: 0.2; }
-          50% { opacity: 0.4; }
-        }
-        
-        @keyframes expandGlow {
-          0% { r: 0; opacity: 0.3; }
-          100% { r: var(--expand-r); opacity: 0; }
-        }
-      `}</style>
-    </header>
+            <Card className="bg-white/95 backdrop-blur border-2 border-slate-200 overflow-hidden group hover:border-primary/50 hover:shadow-xl transition-all duration-300">
+              <CardContent className="p-5 text-center">
+                <Lightbulb className="w-10 h-10 text-yellow-500 mx-auto mb-3" />
+                <h3 className="text-lg font-bold text-slate-900">Card 3</h3>
+                <p className="text-sm text-slate-600">Descripción de la card 3</p>
+              </CardContent>
+            </Card>
+          </section>
+
+          {/* Aquí se renderiza cualquier contenido adicional */}
+          {children}
+        </main>
+
+        {/* Footer */}
+        <footer className="border-t border-border/40 mt-20">
+          <div className="container mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-center gap-6">
+            <DocentIALogo />
+            <p className="text-sm text-muted-foreground">
+              © 2025 DocentIA. Diseñado para docentes de Extremadura.
+            </p>
+          </div>
+        </footer>
+
+        <Analytics />
+      </body>
+    </html>
   )
 }

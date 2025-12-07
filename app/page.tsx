@@ -385,8 +385,7 @@ export default function Page() {
                   </div>
                   <div className="flex-1">
                     <p className="text-foreground/90 text-pretty leading-relaxed">
-                      "He podido crear ahorro de horario y contenido de muy buen nivel con facilidad. Increíble
-                      herramienta."
+                      "El botón de emergencia me salvó cuando el sustituto no llegó. En 30 segundos tenía una actividad completa lista."
                     </p>
                   </div>
                 </div>
