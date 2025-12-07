@@ -3,8 +3,6 @@
 import type React from "react"
 
 import { useState } from "react"
-import { Document, Packer, Paragraph, TextRun, HeadingLevel } from "docx"
-import { saveAs } from "file-saver"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
@@ -52,72 +50,15 @@ export default function BotonEmergencia() {
     setResult(null)
   }
 
-  const handleDownloadWord = async () => {
+  const handleDownload = () => {
     if (!result) return
-
-    // Dividir el texto en párrafos
-    const paragraphs = result.split('\n\n').map(text => {
-      // Detectar títulos (líneas que terminan en :)
-      if (text.trim().endsWith(':')) {
-        return new Paragraph({
-          heading: HeadingLevel.HEADING_2,
-          children: [new TextRun({ text: text.trim(), bold: true })],
-          spacing: { before: 200, after: 100 }
-        })
-      }
-      
-      return new Paragraph({
-        children: [new TextRun(text)],
-        spacing: { after: 100 }
-      })
-    })
-
-    // Crear documento
-    const doc = new Document({
-      sections: [{
-        properties: {},
-        children: [
-          new Paragraph({
-            heading: HeadingLevel.HEADING_1,
-            children: [new TextRun({ text: "Actividad de Emergencia - DocentIA", bold: true })],
-            spacing: { after: 200 }
-          }),
-          new Paragraph({
-            children: [
-              new TextRun({ text: `Nivel: `, bold: true }),
-              new TextRun(formData.nivel),
-            ],
-            spacing: { after: 50 }
-          }),
-          new Paragraph({
-            children: [
-              new TextRun({ text: `Curso: `, bold: true }),
-              new TextRun(formData.curso),
-            ],
-            spacing: { after: 50 }
-          }),
-          new Paragraph({
-            children: [
-              new TextRun({ text: `Asignatura: `, bold: true }),
-              new TextRun(formData.asignatura),
-            ],
-            spacing: { after: 50 }
-          }),
-          new Paragraph({
-            children: [
-              new TextRun({ text: `Duración: `, bold: true }),
-              new TextRun(`${formData.duracion} minutos`),
-            ],
-            spacing: { after: 300 }
-          }),
-          ...paragraphs
-        ]
-      }]
-    })
-
-    // Generar y descargar
-    const blob = await Packer.toBlob(doc)
-    saveAs(blob, "actividad-emergencia.docx")
+    const element = document.createElement("a")
+    const file = new Blob([result], { type: "text/plain" })
+    element.href = URL.createObjectURL(file)
+    element.download = "actividad.txt"
+    document.body.appendChild(element)
+    element.click()
+    document.body.removeChild(element)
   }
 
   return (
@@ -291,7 +232,7 @@ export default function BotonEmergencia() {
 
               <div className="flex gap-4">
                 <Button
-                  onClick={handleDownloadWord}
+                  onClick={handleDownload}
                   className="flex-1 bg-primary hover:bg-primary/90 text-primary-foreground h-12"
                 >
                   <Download className="w-4 h-4 mr-2" />
