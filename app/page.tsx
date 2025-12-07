@@ -27,7 +27,14 @@ export default function Page() {
                 FAQ
               </a>
             </nav>
-            <ThemeToggle />
+            <div className="flex items-center gap-4">
+              <ThemeToggle />
+              <a href="https://docentia-frontend.vercel.app" className="hidden md:block">
+                <Button variant="outline" size="sm">
+                  Acceder
+                </Button>
+              </a>
+            </div>
           </div>
         </div>
       </header>
@@ -48,19 +55,23 @@ export default function Page() {
                 Diseñado para docentes de Extremadura. Compatible con LOMLOE y decretos autonómicos.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button
-                  size="lg"
-                  className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6 rounded-xl font-semibold"
-                >
-                  Crear cuenta
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-2 border-primary text-white hover:bg-primary/20 text-lg px-8 py-6 rounded-xl font-semibold bg-transparent backdrop-blur-sm"
-                >
-                  Probar Botón de Emergencia Gratis
-                </Button>
+                <a href="https://docentia-frontend.vercel.app">
+                  <Button
+                    size="lg"
+                    className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6 rounded-xl font-semibold w-full sm:w-auto"
+                  >
+                    🚀 Acceder a los Generadores
+                  </Button>
+                </a>
+                <a href="https://docentia-frontend.vercel.app/generadores/boton-emergencia.html">
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="border-2 border-primary text-white hover:bg-primary/20 text-lg px-8 py-6 rounded-xl font-semibold bg-transparent backdrop-blur-sm w-full sm:w-auto"
+                  >
+                    ⚡ Probar Botón de Emergencia Gratis
+                  </Button>
+                </a>
               </div>
               <p className="text-sm text-white/60">
                 Sin tarjeta, sin compromiso. Botón de Emergencia gratis con 5 usos/mes.
@@ -90,49 +101,55 @@ export default function Page() {
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {/* Feature 1 - Botón de Emergencia */}
-            <Card className="bg-white overflow-hidden group hover:shadow-2xl transition-all duration-300">
-              <div className="relative h-64 overflow-hidden">
-                <img
-                  src="/images/image-f7ilzpdPF1zewVCY5snGjZ0zhBr9Kl.png"
-                  alt="Botón de emergencia - Envía rápidamente comunicaciones importantes"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <CardContent className="p-6">
-                <h3 className="text-2xl font-bold text-slate-900 mb-2">Botón de emergencia</h3>
-                <p className="text-slate-600">Envía rápidamente comunicaciones importantes</p>
-              </CardContent>
-            </Card>
+            <a href="https://docentia-frontend.vercel.app/generadores/boton-emergencia.html">
+              <Card className="bg-white overflow-hidden group hover:shadow-2xl transition-all duration-300 cursor-pointer h-full">
+                <div className="relative h-64 overflow-hidden">
+                  <img
+                    src="/images/image-f7ilzpdPF1zewVCY5snGjZ0zhBr9Kl.png"
+                    alt="Botón de emergencia - Envía rápidamente comunicaciones importantes"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-2xl font-bold text-slate-900 mb-2">Botón de emergencia 🚨</h3>
+                  <p className="text-slate-600">Genera actividades en 30 segundos para situaciones urgentes</p>
+                </CardContent>
+              </Card>
+            </a>
 
             {/* Feature 2 - Unidades Didácticas */}
-            <Card className="bg-white overflow-hidden group hover:shadow-2xl transition-all duration-300">
-              <div className="relative h-64 overflow-hidden">
-                <img
-                  src="/images/image-AFn1DwPHiuLFf4gRGx8rkZf331G3IH.png"
-                  alt="Unidades didácticas - Prepara matererial de forma con facilidad"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <CardContent className="p-6">
-                <h3 className="text-2xl font-bold text-slate-900 mb-2">Unidades didácticas</h3>
-                <p className="text-slate-600">Prepara matererial de forma rápida con facilidad</p>
-              </CardContent>
-            </Card>
+            <a href="https://docentia-frontend.vercel.app">
+              <Card className="bg-white overflow-hidden group hover:shadow-2xl transition-all duration-300 cursor-pointer h-full">
+                <div className="relative h-64 overflow-hidden">
+                  <img
+                    src="/images/image-AFn1DwPHiuLFf4gRGx8rkZf331G3IH.png"
+                    alt="Unidades didácticas - Prepara material de forma con facilidad"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-2xl font-bold text-slate-900 mb-2">Unidades didácticas 📚</h3>
+                  <p className="text-slate-600">Prepara material completo con facilidad</p>
+                </CardContent>
+              </Card>
+            </a>
 
             {/* Feature 3 - Exámenes Automáticos con Rúbricas */}
-            <Card className="bg-white overflow-hidden group hover:shadow-2xl transition-all duration-300">
-              <div className="relative h-64 overflow-hidden">
-                <img
-                  src="/images/mujer-portada.png"
-                  alt="Exámenes automáticos - Corrige examenes de forma eficiente"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <CardContent className="p-6">
-                <h3 className="text-2xl font-bold text-slate-900 mb-2">Exámenes automáticos</h3>
-                <p className="text-slate-600">Corrige exámenes y crea rúbricas de evaluación</p>
-              </CardContent>
-            </Card>
+            <a href="https://docentia-frontend.vercel.app">
+              <Card className="bg-white overflow-hidden group hover:shadow-2xl transition-all duration-300 cursor-pointer h-full">
+                <div className="relative h-64 overflow-hidden">
+                  <img
+                    src="/images/mujer-portada.png"
+                    alt="Exámenes automáticos - Corrige examenes de forma eficiente"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-2xl font-bold text-slate-900 mb-2">Exámenes automáticos 📝</h3>
+                  <p className="text-slate-600">Genera exámenes y crea rúbricas de evaluación</p>
+                </CardContent>
+              </Card>
+            </a>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mt-16">
@@ -156,8 +173,8 @@ export default function Page() {
                   <div className="w-14 h-14 rounded-full bg-gradient-to-br from-indigo-400 to-blue-500 flex items-center justify-center group-hover:scale-110 transition-transform">
                     <FileText className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900">Informes</h3>
-                  <p className="text-sm text-slate-600">Boletines personalizados</p>
+                  <h3 className="text-lg font-bold text-slate-900">Informes para familias</h3>
+                  <p className="text-sm text-slate-600">Comunicación profesional</p>
                 </div>
               </CardContent>
             </Card>
@@ -166,153 +183,161 @@ export default function Page() {
             <Card className="bg-white/95 backdrop-blur border-2 border-slate-200 overflow-hidden group hover:border-primary/50 hover:shadow-xl transition-all duration-300">
               <CardContent className="p-5">
                 <div className="flex flex-col items-center text-center space-y-2">
-                  <div className="w-14 h-14 rounded-full bg-gradient-to-br from-yellow-400 to-amber-500 flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <div className="w-14 h-14 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Lightbulb className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900">Generador de Ideas</h3>
-                  <p className="text-sm text-slate-600">Propuestas creativas</p>
+                  <h3 className="text-lg font-bold text-slate-900">Generador de ideas</h3>
+                  <p className="text-sm text-slate-600">Inspiración ilimitada</p>
                 </div>
               </CardContent>
             </Card>
 
             {/* Feature 7 - Problemas de Matemáticas */}
-            <Card className="bg-white/95 backdrop-blur border-2 border-slate-200 overflow-hidden group hover:border-primary/50 hover:shadow-xl transition-all duration-300">
-              <CardContent className="p-5">
-                <div className="flex flex-col items-center text-center space-y-2">
-                  <div className="w-14 h-14 rounded-full bg-gradient-to-br from-red-400 to-orange-500 flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <Calculator className="w-7 h-7 text-white" />
+            <a href="https://docentia-frontend.vercel.app/generadores/problemas-matematicas.html">
+              <Card className="bg-white/95 backdrop-blur border-2 border-slate-200 overflow-hidden group hover:border-primary/50 hover:shadow-xl transition-all duration-300 cursor-pointer h-full">
+                <CardContent className="p-5">
+                  <div className="flex flex-col items-center text-center space-y-2">
+                    <div className="w-14 h-14 rounded-full bg-gradient-to-br from-purple-400 to-pink-500 flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <Calculator className="w-7 h-7 text-white" />
+                    </div>
+                    <h3 className="text-lg font-bold text-slate-900">Problemas de Matemáticas</h3>
+                    <p className="text-sm text-slate-600">Con soluciones paso a paso</p>
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900">Problemas de Matemáticas</h3>
-                  <p className="text-sm text-slate-600">Genera ejercicios personalizados</p>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </a>
           </div>
         </div>
       </section>
 
-      <section id="precios" className="container mx-auto px-6 py-20 bg-gradient-to-b from-background to-muted/20">
+      {/* Pricing Section */}
+      <section id="precios" className="container mx-auto px-6 py-20">
         <div className="space-y-6 mb-16 text-center">
-          <h2 className="text-4xl lg:text-5xl font-bold text-balance">Planes adaptados a ti</h2>
+          <h2 className="text-4xl lg:text-5xl font-bold text-balance">Planes y precios</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
-            Elige el plan que mejor se ajuste a tus necesidades. Sin compromisos, cancela cuando quieras
+            Elige el plan que mejor se adapte a tus necesidades. Todos con acceso inmediato.
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {/* Plan Gratuito */}
-          <Card className="bg-card border-border/50 hover:border-primary/30 transition-all">
+          {/* Plan Gratis */}
+          <Card className="bg-card border-border/50 hover:border-primary/30 transition-colors relative">
             <CardContent className="p-8 space-y-6">
-              <div>
-                <h3 className="text-2xl font-bold mb-2">Plan Gratuito</h3>
-                <p className="text-muted-foreground text-sm">Perfecto para empezar</p>
-              </div>
               <div className="space-y-2">
+                <h3 className="text-2xl font-bold">Gratis</h3>
                 <div className="flex items-baseline gap-2">
                   <span className="text-5xl font-bold">0€</span>
                   <span className="text-muted-foreground">/mes</span>
                 </div>
-                <p className="text-sm text-muted-foreground">Gratis para siempre</p>
+                <p className="text-sm text-muted-foreground">Para probar DocentIA</p>
               </div>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-sm">Botón de Emergencia: 5 usos/mes</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-sm">Acceso limitado a funciones básicas</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+
+              <div className="space-y-3">
+                <div className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                  <span className="text-sm">5 usos/mes del Botón de Emergencia</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                  <span className="text-sm">Actividades en 30 segundos</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                   <span className="text-sm">Compatible con LOMLOE</span>
-                </li>
-              </ul>
-              <Button variant="outline" className="w-full bg-transparent">
-                Comenzar gratis
-              </Button>
+                </div>
+              </div>
+
+              <a href="https://docentia-frontend.vercel.app" className="block">
+                <Button variant="outline" className="w-full">
+                  Empezar gratis
+                </Button>
+              </a>
             </CardContent>
           </Card>
 
           {/* Plan Profesional */}
-          <Card className="bg-gradient-to-br from-primary/15 to-primary/5 border-primary/50 hover:border-primary transition-all relative overflow-hidden shadow-lg">
-            <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-bold">
-              Más popular
+          <Card className="bg-gradient-to-br from-primary/10 to-primary/5 border-primary/50 relative shadow-lg shadow-primary/20">
+            <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+              <span className="bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-bold shadow-lg">
+                Más popular
+              </span>
             </div>
             <CardContent className="p-8 space-y-6">
-              <div>
-                <h3 className="text-2xl font-bold mb-2">Plan Profesional</h3>
-                <p className="text-muted-foreground text-sm">Para docentes activos</p>
-              </div>
               <div className="space-y-2">
+                <h3 className="text-2xl font-bold">Profesional</h3>
                 <div className="flex items-baseline gap-2">
-                  <span className="text-5xl font-bold">12€</span>
+                  <span className="text-5xl font-bold">9.99€</span>
                   <span className="text-muted-foreground">/mes</span>
                 </div>
-                <p className="text-sm text-muted-foreground">Facturado mensualmente</p>
+                <p className="text-sm text-muted-foreground">Para profesores activos</p>
               </div>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-sm font-medium">Todo del plan gratuito, más:</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-sm">Usos ilimitados de todas las funciones</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-sm">Generación de unidades didácticas completas</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+
+              <div className="space-y-3">
+                <div className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                  <span className="text-sm font-medium">Todos los generadores ilimitados</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                  <span className="text-sm">Botón de Emergencia ilimitado</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                  <span className="text-sm">Unidades didácticas completas</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                  <span className="text-sm">Exámenes y rúbricas</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                   <span className="text-sm">Soporte prioritario</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-sm">Actualizaciones automáticas</span>
-                </li>
-              </ul>
-              <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90">Empezar ahora</Button>
+                </div>
+              </div>
+
+              <a href="https://docentia-frontend.vercel.app" className="block">
+                <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
+                  Comenzar ahora
+                </Button>
+              </a>
             </CardContent>
           </Card>
 
-          {/* Plan Centro Educativo */}
-          <Card className="bg-card border-border/50 hover:border-primary/30 transition-all">
+          {/* Plan Centro */}
+          <Card className="bg-card border-border/50 hover:border-primary/30 transition-colors">
             <CardContent className="p-8 space-y-6">
-              <div>
-                <h3 className="text-2xl font-bold mb-2">Plan Centro</h3>
-                <p className="text-muted-foreground text-sm">Para todo el claustro</p>
-              </div>
               <div className="space-y-2">
+                <h3 className="text-2xl font-bold">Centro</h3>
                 <div className="flex items-baseline gap-2">
-                  <span className="text-3xl font-bold">Personalizado</span>
+                  <span className="text-5xl font-bold">A medida</span>
                 </div>
-                <p className="text-sm text-muted-foreground">Según número de docentes</p>
+                <p className="text-sm text-muted-foreground">Para centros educativos</p>
               </div>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-sm font-medium">Todo del plan profesional, más:</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-sm">Licencias para todo el centro</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-sm">Formación personalizada</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+
+              <div className="space-y-3">
+                <div className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                  <span className="text-sm">Todo de Profesional</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                  <span className="text-sm">Licencias ilimitadas</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                  <span className="text-sm">Gestión centralizada</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                  <span className="text-sm">Formación incluida</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                   <span className="text-sm">Soporte dedicado</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-sm">Facturación centralizada</span>
-                </li>
-              </ul>
-              <Button variant="outline" className="w-full bg-transparent">
+                </div>
+              </div>
+
+              <Button variant="outline" className="w-full">
                 Contactar
               </Button>
             </CardContent>
@@ -321,75 +346,78 @@ export default function Page() {
       </section>
 
       {/* Testimonials Section */}
-      <section id="testimonios" className="container mx-auto px-6 py-20">
-        <div className="space-y-6 mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-balance">Lo que dicen de DocentIA</h2>
-          <p className="text-xl text-muted-foreground text-pretty">Opiniones de docentes de Extremadura</p>
-        </div>
+      <section id="testimonios" className="bg-muted/50 py-20">
+        <div className="container mx-auto px-6">
+          <div className="space-y-6 mb-16 text-center">
+            <h2 className="text-4xl lg:text-5xl font-bold text-balance">Lo que dicen nuestros usuarios</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
+              Profesores de toda Extremadura ya están ahorrando tiempo con DocentIA
+            </p>
+          </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {/* Testimonial 1 */}
-          <Card className="bg-card border-border/50 hover:border-primary/30 transition-colors">
-            <CardContent className="p-6 space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden flex-shrink-0">
-                  <img src="/images/image.png" alt="Carmen P." className="w-full h-full object-cover" />
+          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {/* Testimonial 1 */}
+            <Card className="bg-card border-border/50 hover:border-primary/30 transition-colors">
+              <CardContent className="p-6 space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden flex-shrink-0">
+                    <img src="/images/image.png" alt="María G." className="w-full h-full object-cover" />
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-foreground/90 text-pretty leading-relaxed">
+                      "DocentIA me ha cambiado la vida. Lo que antes me llevaba horas ahora lo tengo en minutos. Increíble."
+                    </p>
+                  </div>
                 </div>
-                <div className="flex-1">
-                  <p className="text-foreground/90 text-pretty leading-relaxed">
-                    "Siempre he querido tener para aligerar mis métodos de enseñanza. DocentIA me ha cambiado la forma
-                    de trabajar."
-                  </p>
+                <div>
+                  <p className="font-bold text-foreground">María G.</p>
+                  <p className="text-sm text-muted-foreground">Profesora - Cáceres</p>
                 </div>
-              </div>
-              <div>
-                <p className="font-bold text-foreground">Carmen P.</p>
-                <p className="text-sm text-muted-foreground">Maestra de vocación - Cáceres</p>
-              </div>
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
 
-          {/* Testimonial 2 */}
-          <Card className="bg-card border-border/50 hover:border-primary/30 transition-colors">
-            <CardContent className="p-6 space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden flex-shrink-0">
-                  <img src="/images/image.png" alt="Javier L." className="w-full h-full object-cover" />
+            {/* Testimonial 2 */}
+            <Card className="bg-card border-border/50 hover:border-primary/30 transition-colors">
+              <CardContent className="p-6 space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden flex-shrink-0">
+                    <img src="/images/image.png" alt="Javier L." className="w-full h-full object-cover" />
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-foreground/90 text-pretty leading-relaxed">
+                      "He podido crear ahorro de horario y contenido de muy buen nivel con facilidad. Increíble
+                      herramienta."
+                    </p>
+                  </div>
                 </div>
-                <div className="flex-1">
-                  <p className="text-foreground/90 text-pretty leading-relaxed">
-                    "He podido crear ahorro de horario y contenido de muy buen nivel con facilidad. Increíble
-                    herramienta."
-                  </p>
+                <div>
+                  <p className="font-bold text-foreground">Javier L.</p>
+                  <p className="text-sm text-muted-foreground">Profesor - Badajoz</p>
                 </div>
-              </div>
-              <div>
-                <p className="font-bold text-foreground">Javier L.</p>
-                <p className="text-sm text-muted-foreground">Profesor - Badajoz</p>
-              </div>
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
 
-          {/* Testimonial 3 */}
-          <Card className="bg-card border-border/50 hover:border-primary/30 transition-colors">
-            <CardContent className="p-6 space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden flex-shrink-0">
-                  <img src="/images/image.png" alt="Beatriz S." className="w-full h-full object-cover" />
+            {/* Testimonial 3 */}
+            <Card className="bg-card border-border/50 hover:border-primary/30 transition-colors">
+              <CardContent className="p-6 space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden flex-shrink-0">
+                    <img src="/images/image.png" alt="Beatriz S." className="w-full h-full object-cover" />
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-foreground/90 text-pretty leading-relaxed">
+                      "He pasado de hacer muchas tareas a tener una plataforma que lo simplifica todo. Ahorro horas cada
+                      semana."
+                    </p>
+                  </div>
                 </div>
-                <div className="flex-1">
-                  <p className="text-foreground/90 text-pretty leading-relaxed">
-                    "He pasado de hacer muchas tareas a tener una plataforma que lo simplifica todo. Ahorro horas cada
-                    semana."
-                  </p>
+                <div>
+                  <p className="font-bold text-foreground">Beatriz S.</p>
+                  <p className="text-sm text-muted-foreground">Profesora - Mérida</p>
                 </div>
-              </div>
-              <div>
-                <p className="font-bold text-foreground">Beatriz S.</p>
-                <p className="text-sm text-muted-foreground">Profesora - Mérida</p>
-              </div>
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </section>
 
@@ -477,12 +505,14 @@ export default function Page() {
               Únete a cientos de docentes extremeños que ya están transformando su trabajo
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button
-                size="lg"
-                className="bg-primary text-primary-foreground hover:bg-primary/90 text-xl px-12 py-8 rounded-xl font-bold shadow-lg shadow-primary/30"
-              >
-                Crear cuenta gratis
-              </Button>
+              <a href="https://docentia-frontend.vercel.app">
+                <Button
+                  size="lg"
+                  className="bg-primary text-primary-foreground hover:bg-primary/90 text-xl px-12 py-8 rounded-xl font-bold shadow-lg shadow-primary/30"
+                >
+                  🚀 Empezar ahora gratis
+                </Button>
+              </a>
             </div>
             <div className="pt-4 space-y-2">
               <p className="text-sm text-muted-foreground font-medium">
