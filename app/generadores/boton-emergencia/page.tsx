@@ -52,6 +52,17 @@ export default function BotonEmergencia() {
     setResult(null)
   }
 
+  const handleDownloadTxt = () => {
+    if (!result) return
+    const element = document.createElement("a")
+    const file = new Blob([result], { type: "text/plain" })
+    element.href = URL.createObjectURL(file)
+    element.download = "actividad-emergencia.txt"
+    document.body.appendChild(element)
+    element.click()
+    document.body.removeChild(element)
+  }
+
   const handleDownloadWord = async () => {
     if (!result) return
 
@@ -296,6 +307,13 @@ export default function BotonEmergencia() {
                 >
                   <Download className="w-4 h-4 mr-2" />
                   Descargar Word
+                </Button>
+                <Button
+                  onClick={handleDownloadTxt}
+                  className="flex-1 bg-secondary hover:bg-secondary/90 text-secondary-foreground h-12"
+                >
+                  <Download className="w-4 h-4 mr-2" />
+                  Descargar TXT
                 </Button>
                 <Button
                   onClick={handleReset}
